@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import '../assets/css/index.css';
 
 import NavBar from '../Components/NavBar.jsx';
-// import Highlighted from '../Components/Highlighted.jsx'
 import Syllabus_content from '../Components/syllabus_content.jsx';
 
 import { useMediaQuery } from "react-responsive";
