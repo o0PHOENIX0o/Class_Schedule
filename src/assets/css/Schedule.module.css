@@ -101,9 +101,8 @@ h2, h3, p,h4 {
 .title_section {
     position: relative;
     border-radius: 16px;
-    /* padding: 30px; */
     margin: 20px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 12px 2px #000000;
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
 }
@@ -113,7 +112,6 @@ h2, h3, p,h4 {
 }
 
 .overlay {
-    /* background: rgba(0, 0, 0, 0.6); /* Slightly darker overlay for better contrast */
     border-radius: 16px;
     padding: 20px;
     height: 100%;
@@ -149,7 +147,7 @@ h2, h3, p,h4 {
     background: rgba(0, 0, 0, 0.4);
     border-radius: 12px;
     padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 6px 2px #000000;
 }
 
 .current_class h3,
@@ -179,7 +177,7 @@ strong {
 
     .current_class,
     .next_class {
-        width: 100%;
+        width: 90%;
         margin-bottom: 20px;
     }
 
