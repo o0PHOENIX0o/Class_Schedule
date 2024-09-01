@@ -3,7 +3,7 @@ import '../assets/css/index.css';
 
 import NavBar from '../Components/NavBar.jsx';
 // import Highlighted from '../Components/Highlighted.jsx'
-import Syllabus_Content from '../Components/syllabus_content.jsx';
+import Syllabus_content from '../Components/syllabus_content.jsx';
 
 import { useMediaQuery } from "react-responsive";
 
@@ -44,7 +44,7 @@ function Syllabus() {
     return (
         <div className="container">
             <NavBar onCalendarClick={toggleCalendarVisibility} />
-            <Syllabus_Content/>
+            <Syllabus_content/>
 
         </div>
     );

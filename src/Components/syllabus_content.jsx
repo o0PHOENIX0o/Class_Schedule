@@ -1,7 +1,7 @@
 
-import styles from "../assets/css/Syllabus_Content.module.css"
+import styles from "../assets/css/Syllabus_content.module.css"
 
-const Syllabus_Content = function(){
+const Syllabus_content = function(){
         // <div className={styles.container}>
         //     <ul className={styles.Selectors}>
         //         <li className={styles.btn}>FCS</li>
@@ -94,4 +94,4 @@ const Syllabus_Content = function(){
     )
 }
 
-export default Syllabus_Content;
+export default Syllabus_content;
