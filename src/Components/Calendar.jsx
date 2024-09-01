@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../assets/css/Calendar.module.css';
 
-import {useMediaQuery} from "react-responsive";
-
 const Calendar = (props) => {
-  const isDesktopOrLaptop = useMediaQuery({ minWidth: 1024 });
-  let hideCalendar = useMediaQuery({minWidth: 870});
 
 
   const [days, setDays] = useState([]);
