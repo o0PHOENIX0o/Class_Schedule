@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import styles from './assets/css/Calendar.module.css';
+import styles from '../assets/css/Calendar.module.css';
 
 import {useMediaQuery} from "react-responsive";
 

@@ -10,7 +10,7 @@ body {
     color: #e0e0e0; /* Light text color for readability */
 }
 
-h2, h3, p {
+h2, h3, p,h4 {
     margin: 0;
 }
 

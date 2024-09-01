@@ -1,10 +1,9 @@
-import React from "react";
-import styles from "./assets/css/Schedule.module.css";
 
-function Schedule() {
+import styles from "../assets/css/Schedule.module.css";
+
+function HighLightedContent(){
     return (
-        <>
-            <div className={styles.middle_column}>
+        <div className={styles.middle_column}>
                 <div className={styles.title_section}>
                     <div className={styles.overlay}>
                         <div className={styles.header}>
@@ -76,8 +75,7 @@ function Schedule() {
                     </ul>
                 </section>
             </div>
-        </>
-    );
+    )
 }
 
-export default Schedule;
+export default HighLightedContent;
