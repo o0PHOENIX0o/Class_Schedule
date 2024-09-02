@@ -7,8 +7,8 @@ function HighLightedContent(){
                 <div className={styles.title_section}>
                     <div className={styles.overlay}>
                         <div className={styles.header}>
-                            <div className={styles.current_date}>August 31, 2024</div>
-                            <div className={styles.current_time}>10:00 AM</div>
+                            <div className={styles.current_date}>{new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</div>
+                            <div className={styles.current_time}>{new Date().toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true })}</div>
                         </div>
                         <div className={styles.class_info}>
                             <div className={`${styles.class_card} ${styles.current_class}`}>

@@ -4,7 +4,7 @@ import NavBar from '../Components/NavBar.jsx';
 function About() {    
     return (
         <div className="container">
-            <NavBar onCalendarClick={toggleCalendarVisibility} />
+            <NavBar />
             "about"
         </div>
     );

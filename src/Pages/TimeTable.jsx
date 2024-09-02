@@ -7,7 +7,7 @@ function TimeTable() {
 
     return (
         <div className="container">
-            <NavBar onCalendarClick={toggleCalendarVisibility} />
+            <NavBar />
             "time Table"
         </div>
     );
