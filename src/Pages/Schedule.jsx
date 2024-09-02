@@ -9,9 +9,10 @@ import { useMediaQuery } from "react-responsive";
 
 
 function Schedule() {
-
+    const DaysArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     const [isCalendarVisible, setCalendarVisible] = useState(true);
     const [isIconCLicked, setIconCLicked] = useState(false);
+    const [Day, setNewDay] = useState(DaysArray[new Date().getDay()]);
     const isScreenWideEnough = useMediaQuery({ minWidth: 870 });
     const calendarRef = useRef(null);
 
@@ -49,17 +50,21 @@ function Schedule() {
     }, [isIconCLicked]);
 
 
+    function handleClick(day){
+        setNewDay(DaysArray[day]);
+        console.log(day);
+    }
 
 
     return (
         <div className="container">
             <NavBar onCalendarClick={toggleCalendarVisibility} />
             
-            <Highlighted/>
+            <Highlighted selectedDay={Day}/>
 
             {isCalendarVisible && (
                 <div ref={calendarRef}>
-                    <MyCalendar />
+                    <MyCalendar newSchedule={handleClick}/>
                 </div>
             )}
         </div>

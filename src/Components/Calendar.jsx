@@ -23,6 +23,11 @@ const Calendar = (props) => {
 
   useEffect(() => {
     console.log('Selected date:', selectedDate);
+    if(selectedDate){
+      const day = new Date(new Date().getFullYear(),new Date().getMonth(),selectedDate).getDay();
+      // console.log(day);
+      props.newSchedule(day);
+    }
   }, [selectedDate]);
 
   const handleDayClick = (day) => {

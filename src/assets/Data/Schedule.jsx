@@ -1,201 +1,264 @@
-import React from "react"
 
 
-
-const ScheduleData = [
+const ScheduleData = {
+  "Monday": [
     {
-      "Id": "ICT 201",
-      "ShortName": "FCS",
-      "Name": "Foundation of Computer Science",
-      "Credit": "4",
-      "Instructor": "Dr. Rinkaj Goyal",
-      "ClassSchedule": {
-        "Tuesday": {
-          "duration": "2hr",
-          "start": "11:00",
-          "end": "1:00"
-        },
-        "Friday": {
-          "duration": "2hr",
-          "start": "11:00",
-          "end": "1:00"
-        }
-      }
-    },
-    {
-      "id": "ECO 213",
-      "ShortName": "ECO",
-      "Name": "Engineering Economics",
-      "Credit": "2",
+      "name": "Digital Logic and Computer Design",
+      "shortName": "DLCD",
       "Instructor": "TBA",
-      "ClassSchedule": {
-        "Tuesday": {
-          "duration": "2hr",
-          "start": "9:00",
-          "end": "11:00"
-        }
-      }
+      "course": "ICT 205 / E110",
+      "start": "9:00 AM",
+      "end": "11:00 AM"
     },
     {
-      "id": "ICT 211",
-      "ShortName": "DS",
-      "Name": "Data Structures",
-      "Credit": "4",
+      "course": "ICT 211 / E110",
+      "name": "Data Structures",
+      "shortName": "DS",
       "Instructor": "Navin Rajpal",
-      "ClassSchedule": {
-        "Monday": {
-          "duration": "2hr",
-          "start": "11:00",
-          "end": "1:00"
-        },
-        "Thursday": {
-          "duration": "2hr",
-          "start": "11:00",
-          "end": "1:00"
-        }
-      },
-      "LabSchedule": {
-        "Friday": {
-          "duration": "2hr",
-          "start": "3:30",
-          "end": "5:30"
-        }
-      }
+      "start": "11:00 AM",
+      "end": "1:00 PM"
     },
     {
-      "id": "ICT 209",
-      "ShortName": "OOP",
-      "Name": "Object Oriented Programming Using c++",
-      "Credit": "4",
-      "Instructor": "bhul gaya",
-      "ClassSchedule": {
-        "Tuesday": {
-          "duration": "1hr",
-          "start": "3:30",
-          "end": "4:30"
-        },
-        "Thursday": {
-          "duration": "2hr",
-          "start": "3:30",
-          "end": "5:30"
-        }
-      },
-      "LabSchedule": {
-        "Monday": {
-          "duration": "2hr",
-          "start": "1:30",
-          "end": "3:30"
-        }
-      }
+      "course": "",
+      "name": "Break",
+      "start": "1:00 PM",
+      "end": "1:30 PM"
     },
     {
-      "id": "ICT 207",
-      "ShortName": "DBMS",
-      "Name": "Database Management System",
-      "Credit": "4",
-      "Instructor": "Prof. Udayan Ghose",
-      "ClassSchedule": {
-        "Thursday": {
-          "duration": "2hr",
-          "start": "1:30",
-          "end": "3:30"
-        },
-        "Friday": {
-          "duration": "2hr",
-          "start": "1:30",
-          "end": "3:30"
-        }
-      },
-      "LabSchedule": {
-        "Monday": {
-          "duration": "2hr",
-          "start": "3:30",
-          "end": "5:30"
-        }
-      }
+      "course": "ICT 209 / ETL313",
+      "name": "Object Oriented Programming Using C++ Lab",
+      "shortName": "OOP Lab",
+      "start": "1:30 PM",
+      "end": "3:30 PM"
     },
     {
-      "id": "ICT 203",
-      "ShortName": "OS",
-      "Name": "Operating Systems",
-      "Credit": "3",
-      "Instructor": "bhul gaya",
-      "ClassSchedule": {
-        "Tuesday": {
-          "duration": "2hr",
-          "start": "1:30",
-          "end": "3:30"
-        },
-        "Wednesday": {
-          "duration": "2hr",
-          "start": "11:00",
-          "end": "1:00"
-        }
-      },
-      "LabSchedule": {
-        "Wednesday": {
-          "duration": "2hr",
-          "start": "3:30",
-          "end": "5:30"
-        }
-      }
-    },
-    {
-      "id": "ICT 205",
-      "ShortName": "DLCD",
-      "Name": "Digital Logic and Computer Design",
-      "Credit": "4",
-      "Instructor": "TBA",
-      "ClassSchedule": {
-        "Monday": {
-          "duration": "2hr",
-          "start": "9:00",
-          "end": "11:00"
-        },
-        "Wednesday": {
-          "duration": "2hr",
-          "start": "1:30",
-          "end": "3:30"
-        }
-      }
-    },
-    {
-      "id": "BC 123",
-      "ShortName": "C",
-      "Name": "Bridge Course in Programming in C",
-      "Credit": "0",
-      "Instructor": "TBA",
-      "ClassSchedule": {
-        "Wednesday": {
-          "duration": "2hr",
-          "start": "9:00",
-          "end": "11:00"
-        },
-        "Thursday": {
-          "duration": "1hr",
-          "start": "10:00",
-          "end": "11:00"
-        }
-      }
-    },
-    {
-      "id": "BC 121",
-      "ShortName": "Maths",
-      "Name": "Bridge Course in Mathematics",
-      "Credit": "0",
-      "Instructor": "TBA",
-      "ClassSchedule": {
-        "Thursday": {
-          "duration": "2hr",
-          "start": "9:00",
-          "end": "10:00"
-        },
-        "Friday": {
-          "duration": "2hr",
-          "start": "9:00",
-          "end": "11:00"
-        }
-      }
+      "course": "ICT 207 / ETL312",
+      "name": "Database Management System Lab",
+      "shortName": "DBMS Lab",
+      "start": "3:30 PM",
+      "end": "5:30 PM"
     }
-];
+  ],
+  "Tuesday": [
+    {
+      "course": "ECO 213 / E110",
+      "name": "Engineering Economics ",
+      "shortName": "ECO",
+      "Instructor": "TBA",
+      "start": "9:00 AM",
+      "end": "11:00 AM"
+    },
+    {
+      "course": "ICT 201 / E110",
+      "name": "Foundation of Computer Science",
+      "shortName": "FCS",
+      "Instructor": "Dr. Rinkaj Goyal",
+      "start": "11:00 AM",
+      "end": "1:00 PM"
+    },
+    {
+      "course": "",
+      "name": "Break",
+      "start": "1:00 PM",
+      "end": "1:30 PM"
+    },
+    {
+      "course": "ICT 203 / E110",
+      "name": "Operating Systems",
+      "shortName": "OS",
+      "Instructor": "bhul gaya",
+      "start": "1:30 PM",
+      "end": "3:30 PM"
+    },
+    {
+      "course": "ICT 209 / E110",
+      "name": "Object Oriented Programming Using C++",
+      "shortName": "OOP",
+      "Instructor": "bhul gaya",
+      "start": "3:30 PM",
+      "end": "4:30 PM"
+    }
+  ],
+  "Wednesday": [
+    {
+      "course": "BC 123 / E110",
+      "name": "Bridge Course in Programming in C",
+      "shortName": "C",
+      "Instructor": "TBA",
+      "start": "9:00 AM",
+      "end": "11:00 AM"
+    },
+    {
+      "course": "ICT 203 / E110",
+      "name": "Operating Systems",
+      "shortName": "OS",
+      "Instructor": "bhul gaya",
+      "start": "11:00 AM",
+      "end": "1:00 PM"
+    },
+    {
+      "course": "",
+      "name": "Break",
+      "start": "1:00 PM",
+      "end": "1:30 PM"
+    },
+    {
+      "course": "ICT 205 / E110",
+      "name": "Digital Logic and Computer Design",
+      "shortName": "DLCD",
+      "Instructor": "TBA",
+      "start": "1:30 PM",
+      "end": "3:30 PM"
+    },
+    {
+      "course": "ICT 203 / E410",
+      "name": "Operating Systems Lab",
+      "shortName": "OS Lab",
+      "start": "3:30 PM",
+      "end": "5:30 PM"
+    }
+  ],
+  "Thursday": [
+    {
+      "course": "BC 121 / E110",
+      "name": "Bridge Course in Mathematics",
+      "shortName": "Maths",
+      "Instructor": "TBA",
+      "start": "9:00 AM",
+      "end": "10:00 AM"
+    },
+    {
+      "course": "BC 123 / E110",
+      "name": "Bridge Course in Programming in C",
+      "shortName": "C",
+      "Instructor": "TBA",
+      "start": "10:00 AM",
+      "end": "11:00 AM"
+    },
+    {
+      "course": "ICT 211 / E110",
+      "name": "Data Structures",
+      "shortName": "DS",
+      "Instructor": "Navin Rajpal",
+      "start": "11:00 AM",
+      "end": "1:00 PM"
+    },
+    {
+      "course": "",
+      "name": "Break",
+      "start": "1:00 PM",
+      "end": "1:30 PM"
+    },
+    {
+      "course": "ICT 207 / E110",
+      "name": "Database Management System",
+      "shortName": "DBMS",
+      "Instructor": "Prof. Udayan Ghose",
+      "start": "1:30 PM",
+      "end": "3:30 PM"
+    },
+    {
+      "course": "ICT 209 / E110",
+      "name": "Object Oriented Programming Using C++",
+      "shortName": "OOP",
+      "Instructor": "bhul gaya",
+      "start": "3:30 PM",
+      "end": "5:30 PM"
+    }
+  ],
+  "Friday": [
+    {
+      "course": "BC 121 / E110",
+      "name": "Bridge Course in Mathematics",
+      "shortName": "Maths",
+      "Instructor": "TBA",
+      "start": "9:00 AM",
+      "end": "11:00 AM"
+    },
+    {
+      "course": "ICT 201 / E110",
+      "name": "Foundation of Computer Science",
+      "shortName": "FCS",
+      "Instructor": "Dr. Rinkaj Goyal",
+      "start": "11:00 AM",
+      "end": "1:00 PM"
+    },
+    {
+      "course": "",
+      "name": "Break",
+      "start": "1:00 PM",
+      "end": "1:30 PM"
+    },
+    {
+      "course": "ICT 207 / E110",
+      "name": "Database Management System",
+      "shortName": "DBMS",
+      "Instructor": "Prof. Udayan Ghose",
+      "start": "1:30 PM",
+      "end": "3:30 PM"
+    },
+    {
+      "course": "ICT 211 / E219",
+      "name": "Data Structures Lab",
+      "shortName": "DS Lab",
+      "start": "3:30 PM",
+      "end": "5:30 PM"
+    }
+  ]
+};
 
+const GetSchedule = function (day) {
+  if (day == "Sunday" || day == "Saturday")
+    return "";
+  return ScheduleData[day];
+}
+
+function isCurrentTimeWithinRange(periodStart, periodEnd) {
+  let currentTime = new Date().toLocaleTimeString('en-US', {
+      hour: 'numeric',
+      minute: '2-digit',
+      hour12: true
+  });
+
+  const [time, period] = currentTime.split(' ');
+  let [hour, min] = time.split(':').map(Number);
+
+  if (period === 'PM' && hour !== 12) {
+      hour += 12;
+  } else if (period === 'AM' && hour === 12) {
+      hour = 0;
+  }
+
+  const currentMinutes = hour * 60 + min;
+
+  const [Shour, SminPeriod] = periodStart.split(' ');
+  let [startHour, startMin] = Shour.split(':').map(Number);
+
+  if (SminPeriod === 'PM' && startHour !== 12) {
+      startHour += 12;
+  } else if (SminPeriod === 'AM' && startHour === 12) {
+      startHour = 0;
+  }
+
+  const startMinutes = startHour * 60 + parseInt(startMin);
+
+  const [Ehour, EminPeriod] = periodEnd.split(' ');
+  let [endHour, endMin] = Ehour.split(':').map(Number);
+
+  if (EminPeriod === 'PM' && endHour !== 12) {
+      endHour += 12;
+  } else if (EminPeriod === 'AM' && endHour === 12) {
+      endHour = 0;
+  }
+
+  const endMinutes = endHour * 60 + parseInt(endMin);
+
+  if (startMinutes <= endMinutes) {
+      return currentMinutes >= startMinutes && currentMinutes <= endMinutes;
+  } else {
+      return currentMinutes >= startMinutes || currentMinutes <= endMinutes;
+  }
+}
+
+export default GetSchedule;
+export { isCurrentTimeWithinRange };

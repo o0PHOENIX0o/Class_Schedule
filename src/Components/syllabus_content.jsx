@@ -34,8 +34,11 @@ const Syllabus_content = function(){
 
             <div className={styles.content}>
                 <div className={styles.title}>
-                    <h2>{data.Subject}</h2>
-                    <h4>{data.SubjectCode}</h4>
+                    <h2>{data.Subject} ({data.ShortName})</h2>
+                    <h4>Teacher: {data.Instructor}</h4>
+                   
+                    <h4>Subject Code: {data.SubjectCode}</h4>
+                    <h4>credits:{data.Credit}</h4>
                 </div>
                 <div className={styles.subject_container}>
                     {data.syllabus.map((syllabus,index)=>(

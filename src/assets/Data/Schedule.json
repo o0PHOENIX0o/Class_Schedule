@@ -1,8 +1,8 @@
 [
   {
     "Id": "ICT 201",
-    "ShortName": "FCS",
     "Name": "Foundation of Computer Science",
+    "ShortName": "FCS",
     "Credit": "4",
     "Instructor": "Dr. Rinkaj Goyal",
     "ClassSchedule": {
@@ -20,8 +20,8 @@
   },
   {
     "id": "ECO 213",
-    "ShortName": "ECO",
     "Name": "Engineering Economics",
+    "ShortName": "ECO",
     "Credit": "2",
     "Instructor": "TBA",
     "ClassSchedule": {
@@ -34,8 +34,8 @@
   },
   {
     "id": "ICT 211",
-    "ShortName": "DS",
     "Name": "Data Structures",
+    "ShortName": "DS",
     "Credit": "4",
     "Instructor": "Navin Rajpal",
     "ClassSchedule": {
@@ -60,8 +60,8 @@
   },
   {
     "id": "ICT 209",
-    "ShortName": "OOP",
     "Name": "Object Oriented Programming Using c++",
+    "ShortName": "OOP",
     "Credit": "4",
     "Instructor": "bhul gaya",
     "ClassSchedule": {
@@ -86,8 +86,8 @@
   },
   {
     "id": "ICT 207",
-    "ShortName": "DBMS",
     "Name": "Database Management System",
+    "ShortName": "DBMS",
     "Credit": "4",
     "Instructor": "Prof. Udayan Ghose",
     "ClassSchedule": {
@@ -112,8 +112,8 @@
   },
   {
     "id": "ICT 203",
-    "ShortName": "OS",
     "Name": "Operating Systems",
+    "ShortName": "OS",
     "Credit": "3",
     "Instructor": "bhul gaya",
     "ClassSchedule": {
@@ -138,8 +138,8 @@
   },
   {
     "id": "ICT 205",
-    "ShortName": "DLCD",
     "Name": "Digital Logic and Computer Design",
+    "ShortName": "DLCD",
     "Credit": "4",
     "Instructor": "TBA",
     "ClassSchedule": {
@@ -157,8 +157,8 @@
   },
   {
     "id": "BC 123",
-    "ShortName": "C",
     "Name": "Bridge Course in Programming in C",
+    "ShortName": "C",
     "Credit": "0",
     "Instructor": "TBA",
     "ClassSchedule": {
@@ -176,8 +176,8 @@
   },
   {
     "id": "BC 121",
-    "ShortName": "Maths",
     "Name": "Bridge Course in Mathematics",
+    "ShortName": "Maths",
     "Credit": "0",
     "Instructor": "TBA",
     "ClassSchedule": {
