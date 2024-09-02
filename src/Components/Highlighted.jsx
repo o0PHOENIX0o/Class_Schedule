@@ -1,7 +1,13 @@
 
 import styles from "../assets/css/Schedule.module.css";
+import GetTimeTable from "../assets/Data/TimeTable.jsx";
+import React,{useEffect, useState} from "react";
 
 function HighLightedContent(){
+    const [TimeTable,newTimeTable] = useState(GetTimeTable(["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][new Date().getDay()]));
+
+    console.log(TimeTable);
+
     return (
         <div className={styles.middle_column}>
                 <div className={styles.title_section}>
@@ -36,42 +42,25 @@ function HighLightedContent(){
                     </div>
 
                     <ul className={styles.timeline_list}>
-                        <li className={`${styles.timeline_item} ${styles.active_class}`}>
-                            <h4 className={styles.timeline_item_title}>9:00 - 10:00</h4>
-                            <p className={styles.timeline_text}>subject</p>
-                        </li>
-                        <li className={styles.timeline_item}>
-                            <h4 className={styles.timeline_item_title}>10:00 - 11:00</h4>
-                            <p className={styles.timeline_text}>subject</p>
-                        </li>
-                        <li className={styles.timeline_item}>
-                            <h4 className={styles.timeline_item_title}>11:00 - 12:00</h4>
-                            <p className={styles.timeline_text}>subject</p>
-                        </li>
-                        <li className={styles.timeline_item}>
-                            <h4 className={styles.timeline_item_title}>12:00 - 1:00</h4>
-                            <p className={styles.timeline_text}>subject</p>
-                        </li>
-                        <li className={styles.timeline_item}>
-                            <h4 className={styles.timeline_item_title}>1:00 - 1:30</h4>
-                            <p className={styles.timeline_text}>subject</p>
-                        </li>
-                        <li className={styles.timeline_item}>
-                            <h4 className={styles.timeline_item_title}>1:30 - 2:30</h4>
-                            <p className={styles.timeline_text}>subject</p>
-                        </li>
-                        <li className={styles.timeline_item}>
-                            <h4 className={styles.timeline_item_title}>2:30 - 3:30</h4>
-                            <p className={styles.timeline_text}>subject</p>
-                        </li>
-                        <li className={styles.timeline_item}>
-                            <h4 className={styles.timeline_item_title}>3:30 - 4:30</h4>
-                            <p className={styles.timeline_text}>subject</p>
-                        </li>
+                        {TimeTable.map((period,index)=>{
+                            if(!period.course){
+                                return(
+                                <p className={styles.break}> Break </p>
+                                )
+                            }
+                            return (
+                                <li key={index} className={`${styles.timeline_item}`}>
+                                <h4 className={styles.timeline_item_title}>{period.start}- {period.end}</h4>
+                                <p className={styles.timeline_text}>{period.course}</p>
+                                <p className={styles.timeline_text}>{period.name}</p>
+                            </li>
+                            )
+                        })}
+{/*                         
                         <li className={styles.timeline_item}>
                             <h4 className={styles.timeline_item_title}>4:30 - 5:30</h4>
                             <p className={styles.timeline_text}>subject</p>
-                        </li>
+                        </li> */}
                     </ul>
                 </section>
             </div>

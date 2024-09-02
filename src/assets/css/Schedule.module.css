@@ -277,3 +277,13 @@ strong {
 .active_class::before {
     background: hsl(42deg 38.57% 49.27%) !important;
 }
+
+
+.break{
+    padding: 0 10px;
+    background-image: url(/src/assets/Images/mesh.png);
+    text-align: center;
+    font-weight: bold;
+    color: hsl(45, 100%, 72%);
+    border-radius: 2rem;
+}
