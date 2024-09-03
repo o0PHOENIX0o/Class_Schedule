@@ -79,7 +79,7 @@ function HighLightedContent({ selectedDay }) {
                     {Schedule.map((period, index) => {
                         if (!period.course) {
                             return (
-                                <p key={index} className={`${styles.break} ${styles.active_class}`}> Break </p>
+                                <p key={index} className={`${styles.break}`}> Break </p>
                             )
                         }
                         const isInRange = isCurrentTimeWithinRange(period.start, period.end);
