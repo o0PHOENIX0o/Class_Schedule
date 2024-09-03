@@ -261,11 +261,11 @@ strong {
 }
 
 .active_class {
-    box-shadow: -1px 3px 8px 2px rgb(0 0 0 / 68%);
+    box-shadow: 0px 0px 8px 5px rgb(0 0 0 / 68%);
 }
 
 .timeline_item:hover {
-    box-shadow: -1px 3px 8px 2px rgb(0 0 0 / 68%);
+    box-shadow: 0px 0px 8px 5px rgb(0 0 0 / 68%);
 }
 
 .timeline_item:hover::after,
