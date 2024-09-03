@@ -6,7 +6,7 @@ const SyllabusData = {
     "Subject": "Foundation of Computer Science",
     "ShortName": "FCS",
     "Credit": "4",
-    "Instructor": "Dr. Rinkaj Goyal",
+    "Faculty": "Dr. Rinkaj Goyal",
     "SubjectCode": "ICT 201",
     "syllabus": [
       {
@@ -66,7 +66,7 @@ const SyllabusData = {
     "Subject": "Engineering Economics",
     "ShortName": "ECO",
     "Credit": "2",
-    "Instructor": "TBA",
+    "Faculty": "TBA",
     "SubjectCode": "ECO 213",
     "syllabus": [
       {
@@ -114,7 +114,7 @@ const SyllabusData = {
     "Subject": "Data Structures",
     "ShortName": "DS",
     "Credit": "4",
-    "Instructor": "Navin Rajpal",
+    "Faculty": "Navin Rajpal",
     "SubjectCode": "ICT 211",
     "syllabus": [
       {
@@ -171,7 +171,7 @@ const SyllabusData = {
     "Subject": "Object Oriented Programming Using c++",
     "ShortName": "OOP",
     "Credit": "4",
-    "Instructor": "bhul gaya",
+    "Faculty": "bhul gaya",
     "SubjectCode": "ICT 209",
     "syllabus": [
       {
@@ -265,7 +265,7 @@ const SyllabusData = {
     "Subject": "Database Management System",
     "ShortName": "DBMS",
     "Credit": "4",
-    "Instructor": "Prof. Udayan Ghose",
+    "Faculty": "Prof. Udayan Ghose",
     "SubjectCode": "ICT 207",
     "syllabus": [
       {
@@ -356,7 +356,7 @@ const SyllabusData = {
     "Subject": "Operating Systems",
     "ShortName": "OS",
     "Credit": "3",
-    "Instructor": "bhul gaya",
+    "Faculty": "bhul gaya",
     "SubjectCode": "ICT 203",
     "syllabus": [
       {
@@ -449,7 +449,7 @@ const SyllabusData = {
     "Subject": "Digital Logic and Computer Design",
     "ShortName": "DLCD",
     "Credit": "4",
-    "Instructor": "TBA",
+    "Faculty": "TBA",
     "SubjectCode": "ICT 205",
     "syllabus": [
       {
@@ -553,7 +553,7 @@ const SyllabusData = {
     "Subject": "Bridge Course in Programming in C",
     "ShortName": "C",
     "Credit": "0",
-    "Instructor": "TBA",
+    "Faculty": "TBA",
     "SubjectCode": "BC 123",
     "syllabus": [
       {
@@ -640,7 +640,7 @@ const SyllabusData = {
     "Subject": "Bridge Course in Mathematics",
     "ShortName": "Maths",
     "Credit": "0",
-    "Instructor": "TBA",
+    "Faculty": "TBA",
     "SubjectCode": "BC 121",
     "syllabus": [
       {

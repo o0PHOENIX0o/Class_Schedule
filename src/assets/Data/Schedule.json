@@ -4,7 +4,7 @@
     "Name": "Foundation of Computer Science",
     "ShortName": "FCS",
     "Credit": "4",
-    "Instructor": "Dr. Rinkaj Goyal",
+    "Faculty": "Dr. Rinkaj Goyal",
     "ClassSchedule": {
       "Tuesday": {
         "duration": "2hr",
@@ -23,7 +23,7 @@
     "Name": "Engineering Economics",
     "ShortName": "ECO",
     "Credit": "2",
-    "Instructor": "TBA",
+    "Faculty": "TBA",
     "ClassSchedule": {
       "Tuesday": {
         "duration": "2hr",
@@ -37,7 +37,7 @@
     "Name": "Data Structures",
     "ShortName": "DS",
     "Credit": "4",
-    "Instructor": "Navin Rajpal",
+    "Faculty": "Navin Rajpal",
     "ClassSchedule": {
       "Monday": {
         "duration": "2hr",
@@ -63,7 +63,7 @@
     "Name": "Object Oriented Programming Using c++",
     "ShortName": "OOP",
     "Credit": "4",
-    "Instructor": "bhul gaya",
+    "Faculty": "bhul gaya",
     "ClassSchedule": {
       "Tuesday": {
         "duration": "1hr",
@@ -89,7 +89,7 @@
     "Name": "Database Management System",
     "ShortName": "DBMS",
     "Credit": "4",
-    "Instructor": "Prof. Udayan Ghose",
+    "Faculty": "Prof. Udayan Ghose",
     "ClassSchedule": {
       "Thursday": {
         "duration": "2hr",
@@ -115,7 +115,7 @@
     "Name": "Operating Systems",
     "ShortName": "OS",
     "Credit": "3",
-    "Instructor": "bhul gaya",
+    "Faculty": "bhul gaya",
     "ClassSchedule": {
       "Tuesday": {
         "duration": "2hr",
@@ -141,7 +141,7 @@
     "Name": "Digital Logic and Computer Design",
     "ShortName": "DLCD",
     "Credit": "4",
-    "Instructor": "TBA",
+    "Faculty": "TBA",
     "ClassSchedule": {
       "Monday": {
         "duration": "2hr",
@@ -160,7 +160,7 @@
     "Name": "Bridge Course in Programming in C",
     "ShortName": "C",
     "Credit": "0",
-    "Instructor": "TBA",
+    "Faculty": "TBA",
     "ClassSchedule": {
       "Wednesday": {
         "duration": "2hr",
@@ -179,7 +179,7 @@
     "Name": "Bridge Course in Mathematics",
     "ShortName": "Maths",
     "Credit": "0",
-    "Instructor": "TBA",
+    "Faculty": "TBA",
     "ClassSchedule": {
       "Thursday": {
         "duration": "2hr",

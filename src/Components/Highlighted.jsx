@@ -19,12 +19,12 @@ function HighLightedContent({ selectedDay }) {
     useEffect(() => {
         const currentIndex = Schedule.findIndex(period => isCurrentTimeWithinRange(period.start, period.end));
         const currentPeriod = Schedule[currentIndex];
+        let nextPeriod = Schedule[0];
     
         if (currentIndex !== -1) {
             
             if(currentIndex + 1 < Schedule.length ){
-                const nextIndex = currentIndex + 1;
-                const nextPeriod = Schedule[nextIndex];
+                nextPeriod = Schedule[currentIndex + 1];
         
                 if (nextPeriod) {
                     const [NsubjectCode, NroomNo] = nextPeriod.course.split('/');
@@ -42,6 +42,13 @@ function HighLightedContent({ selectedDay }) {
                 console.log("Current Period:", updatedPeriod);
             }
         }
+
+        if (nextPeriod) {
+            const [NsubjectCode, NroomNo] = nextPeriod.course.split('/');
+            const updatedNextPeriod = { ...nextPeriod, roomNo: NroomNo ? NroomNo.trim() : "" };
+            setNextClass(updatedNextPeriod); 
+            console.log("Next Period:", updatedNextPeriod);
+        }
     }, [Schedule]);
 
     return (
@@ -56,13 +63,13 @@ function HighLightedContent({ selectedDay }) {
                         <div className={`${styles.class_card} ${styles.current_class}`}>
                             <h3>Current Class</h3>
                             <p><strong>Subject: </strong>{currentClass.shortName || "--"}</p>
-                            <p><strong>Teacher: </strong>{currentClass.Instructor || "--"}</p>
+                            <p><strong>faculty: </strong>{currentClass.Faculty || "--"}</p>
                             <p><strong>Room no: </strong>{currentClass.roomNo || "--"}</p>
                         </div>
                         <div className={`${styles.class_card} ${styles.next_class}`}>
                             <h3>Next Class</h3>
                             <p><strong>Subject: </strong>{nextClass.shortName || "--"}</p>
-                            <p><strong>Teacher: </strong>{nextClass.Instructor || "--"}</p>
+                            <p><strong>faculty: </strong>{nextClass.Faculty || "--"}</p>
                             <p><strong>Room no: </strong>{nextClass.roomNo || "--"}</p>
                         </div>
                     </div>

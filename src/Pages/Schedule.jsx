@@ -10,6 +10,7 @@ import { useMediaQuery } from "react-responsive";
 
 function Schedule() {
     const DaysArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    
     const [isCalendarVisible, setCalendarVisible] = useState(true);
     const [isIconCLicked, setIconCLicked] = useState(false);
     const [Day, setNewDay] = useState(DaysArray[new Date().getDay()]);

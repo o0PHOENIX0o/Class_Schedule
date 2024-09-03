@@ -5,7 +5,7 @@ const ScheduleData = {
     {
       "name": "Digital Logic and Computer Design",
       "shortName": "DLCD",
-      "Instructor": "TBA",
+      "Faculty": "TBA",
       "course": "ICT 205 / E110",
       "start": "9:00 AM",
       "end": "11:00 AM"
@@ -14,7 +14,7 @@ const ScheduleData = {
       "course": "ICT 211 / E110",
       "name": "Data Structures",
       "shortName": "DS",
-      "Instructor": "Navin Rajpal",
+      "Faculty": "Navin Rajpal",
       "start": "11:00 AM",
       "end": "1:00 PM"
     },
@@ -44,7 +44,7 @@ const ScheduleData = {
       "course": "ECO 213 / E110",
       "name": "Engineering Economics ",
       "shortName": "ECO",
-      "Instructor": "TBA",
+      "Faculty": "TBA",
       "start": "9:00 AM",
       "end": "11:00 AM"
     },
@@ -52,7 +52,7 @@ const ScheduleData = {
       "course": "ICT 201 / E110",
       "name": "Foundation of Computer Science",
       "shortName": "FCS",
-      "Instructor": "Dr. Rinkaj Goyal",
+      "Faculty": "Dr. Rinkaj Goyal",
       "start": "11:00 AM",
       "end": "1:00 PM"
     },
@@ -66,7 +66,7 @@ const ScheduleData = {
       "course": "ICT 203 / E110",
       "name": "Operating Systems",
       "shortName": "OS",
-      "Instructor": "bhul gaya",
+      "Faculty": "bhul gaya",
       "start": "1:30 PM",
       "end": "3:30 PM"
     },
@@ -74,7 +74,7 @@ const ScheduleData = {
       "course": "ICT 209 / E110",
       "name": "Object Oriented Programming Using C++",
       "shortName": "OOP",
-      "Instructor": "bhul gaya",
+      "Faculty": "bhul gaya",
       "start": "3:30 PM",
       "end": "4:30 PM"
     }
@@ -84,7 +84,7 @@ const ScheduleData = {
       "course": "BC 123 / E110",
       "name": "Bridge Course in Programming in C",
       "shortName": "C",
-      "Instructor": "TBA",
+      "Faculty": "TBA",
       "start": "9:00 AM",
       "end": "11:00 AM"
     },
@@ -92,7 +92,7 @@ const ScheduleData = {
       "course": "ICT 203 / E110",
       "name": "Operating Systems",
       "shortName": "OS",
-      "Instructor": "bhul gaya",
+      "Faculty": "bhul gaya",
       "start": "11:00 AM",
       "end": "1:00 PM"
     },
@@ -106,7 +106,7 @@ const ScheduleData = {
       "course": "ICT 205 / E110",
       "name": "Digital Logic and Computer Design",
       "shortName": "DLCD",
-      "Instructor": "TBA",
+      "Faculty": "TBA",
       "start": "1:30 PM",
       "end": "3:30 PM"
     },
@@ -123,7 +123,7 @@ const ScheduleData = {
       "course": "BC 121 / E110",
       "name": "Bridge Course in Mathematics",
       "shortName": "Maths",
-      "Instructor": "TBA",
+      "Faculty": "TBA",
       "start": "9:00 AM",
       "end": "10:00 AM"
     },
@@ -131,7 +131,7 @@ const ScheduleData = {
       "course": "BC 123 / E110",
       "name": "Bridge Course in Programming in C",
       "shortName": "C",
-      "Instructor": "TBA",
+      "Faculty": "TBA",
       "start": "10:00 AM",
       "end": "11:00 AM"
     },
@@ -139,7 +139,7 @@ const ScheduleData = {
       "course": "ICT 211 / E110",
       "name": "Data Structures",
       "shortName": "DS",
-      "Instructor": "Navin Rajpal",
+      "Faculty": "Navin Rajpal",
       "start": "11:00 AM",
       "end": "1:00 PM"
     },
@@ -153,7 +153,7 @@ const ScheduleData = {
       "course": "ICT 207 / E110",
       "name": "Database Management System",
       "shortName": "DBMS",
-      "Instructor": "Prof. Udayan Ghose",
+      "Faculty": "Prof. Udayan Ghose",
       "start": "1:30 PM",
       "end": "3:30 PM"
     },
@@ -161,7 +161,7 @@ const ScheduleData = {
       "course": "ICT 209 / E110",
       "name": "Object Oriented Programming Using C++",
       "shortName": "OOP",
-      "Instructor": "bhul gaya",
+      "Faculty": "bhul gaya",
       "start": "3:30 PM",
       "end": "5:30 PM"
     }
@@ -171,7 +171,7 @@ const ScheduleData = {
       "course": "BC 121 / E110",
       "name": "Bridge Course in Mathematics",
       "shortName": "Maths",
-      "Instructor": "TBA",
+      "Faculty": "TBA",
       "start": "9:00 AM",
       "end": "11:00 AM"
     },
@@ -179,7 +179,7 @@ const ScheduleData = {
       "course": "ICT 201 / E110",
       "name": "Foundation of Computer Science",
       "shortName": "FCS",
-      "Instructor": "Dr. Rinkaj Goyal",
+      "Faculty": "Dr. Rinkaj Goyal",
       "start": "11:00 AM",
       "end": "1:00 PM"
     },
@@ -193,7 +193,7 @@ const ScheduleData = {
       "course": "ICT 207 / E110",
       "name": "Database Management System",
       "shortName": "DBMS",
-      "Instructor": "Prof. Udayan Ghose",
+      "Faculty": "Prof. Udayan Ghose",
       "start": "1:30 PM",
       "end": "3:30 PM"
     },
