@@ -68,14 +68,14 @@ const ScheduleData = {
       "shortName": "OS",
       "Faculty": "bhul gaya",
       "start": "1:30 PM",
-      "end": "3:30 PM"
+      "end": "2:30 PM"
     },
     {
       "course": "ICT 209 / E110",
       "name": "Object Oriented Programming Using C++",
       "shortName": "OOP",
       "Faculty": "bhul gaya",
-      "start": "3:30 PM",
+      "start": "2:30 PM",
       "end": "4:30 PM"
     }
   ],
