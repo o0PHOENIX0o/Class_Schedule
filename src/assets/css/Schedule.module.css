@@ -210,7 +210,7 @@ strong {
 
 .timeline_item p {
     text-align: justify;
-    /* margin-left: 2rem; */
+    margin:0;
 }
 
 .timeline_item {

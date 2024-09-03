@@ -13,6 +13,9 @@ body{
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1,p{
+  margin: 0;
+}
 
 .container {
   margin: 5rem;

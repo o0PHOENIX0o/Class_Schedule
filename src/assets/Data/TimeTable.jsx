@@ -28,6 +28,7 @@ const ScheduleData = {
       "course": "ICT 209 / ETL313",
       "name": "Object Oriented Programming Using C++ Lab",
       "shortName": "OOP Lab",
+      "Faculty": "---",
       "start": "1:30 PM",
       "end": "3:30 PM"
     },
@@ -35,6 +36,7 @@ const ScheduleData = {
       "course": "ICT 207 / ETL312",
       "name": "Database Management System Lab",
       "shortName": "DBMS Lab",
+      "Faculty": "---",
       "start": "3:30 PM",
       "end": "5:30 PM"
     }
@@ -114,6 +116,7 @@ const ScheduleData = {
       "course": "ICT 203 / E410",
       "name": "Operating Systems Lab",
       "shortName": "OS Lab",
+      "Faculty":"---",
       "start": "3:30 PM",
       "end": "5:30 PM"
     }
@@ -201,6 +204,7 @@ const ScheduleData = {
       "course": "ICT 211 / E219",
       "name": "Data Structures Lab",
       "shortName": "DS Lab",
+      "Faculty":"---",
       "start": "3:30 PM",
       "end": "5:30 PM"
     }
@@ -221,11 +225,9 @@ const getNextClass = function(current, dayIndex) {
   // let hour = 13;
   let hour = new Date().getHours();
   if (hour > 18 || hour === 0) {
-      console.log("---------- next day --------------");
       let day = DaysArray[(dayIndex + 1) % 7];
       return ScheduleData[day][0] || { course: "No upcoming classes" };
   } else {
-      console.log("---------- current day --------------");
       let day = DaysArray[dayIndex];
       if (current === -1) { return ScheduleData[day][0] || { course: "No classes today" }; }
       return ScheduleData[day][current] || { course: "No more classes today" };

@@ -53,7 +53,6 @@ function Schedule() {
 
     function handleClick(day){
         setNewDay(day);
-        console.log(day);
     }
 
 

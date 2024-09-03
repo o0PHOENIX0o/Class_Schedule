@@ -9,7 +9,6 @@ function HighLightedContent({ selectedDay }) {
 
     useEffect(() => {
         const scheduleData = GetSchedule(selectedDay);
-        console.log(scheduleData)
         setSchedule(scheduleData);
     }, [selectedDay]);
 
@@ -30,7 +29,6 @@ function HighLightedContent({ selectedDay }) {
             nextPeriod = getNextClass(currentIndex, selectedDay);
         }
 
-        console.log(currentIndex,currentPeriod);
 
         if (currentPeriod.course !== currentClass.course) {
             const [subjectCode, roomNo] = currentPeriod.course.split('/');

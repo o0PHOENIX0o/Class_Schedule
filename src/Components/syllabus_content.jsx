@@ -19,6 +19,8 @@ const Syllabus_content = function(){
 
     return(
         <div className={styles.container}>
+            <h1>Syllabus</h1><hr />
+
             <ul className={styles.Selectors}>
                 <li onClick={getSylabus} className={`${styles.btn}  ${styles.activeBtn}`}>FCS</li>
                 <li onClick={getSylabus} className={styles.btn}>DS</li>

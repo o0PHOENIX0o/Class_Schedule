@@ -1,6 +1,7 @@
 import '../assets/css/index.css';
 
 import NavBar from '../Components/NavBar.jsx';
+import TimeTableContent from '../Components/TimeTableContent.jsx'
 
 function TimeTable() {
 
@@ -8,7 +9,7 @@ function TimeTable() {
     return (
         <div className="container">
             <NavBar />
-            "time Table"
+            <TimeTableContent />
         </div>
     );
 }
