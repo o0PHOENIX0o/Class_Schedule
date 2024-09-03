@@ -5,7 +5,7 @@ import GetSchedule from '../assets/Data/TimeTable.jsx';
 const TimeTableContent = function(){
     const [data,setData] = useState(GetSchedule(1));
     const [title,settitle] = useState("Monday");
-    const DaysArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const DaysArray = ["Sunday", "Mon", "Tue", "Wed", "Thu", "Fri", "Saturday"];
 
     const getTimeTable = function(event){
         let element = event.target;
@@ -24,11 +24,11 @@ const TimeTableContent = function(){
         <div className={styles.container}>
             <h1>Time Table</h1><hr />
             <ul className={styles.Selectors}>
-                <li onClick={getTimeTable} className={`${styles.btn}  ${styles.activeBtn}`}>Monday</li>
-                <li onClick={getTimeTable} className={styles.btn}>Tuesday</li>
-                <li onClick={getTimeTable} className={styles.btn}>Wednesday</li>
-                <li onClick={getTimeTable} className={styles.btn}>Thursday</li>
-                <li onClick={getTimeTable} className={styles.btn}>Friday</li>
+                <li onClick={getTimeTable} className={`${styles.btn}  ${styles.activeBtn}`}>Mon</li>
+                <li onClick={getTimeTable} className={styles.btn}>Tue</li>
+                <li onClick={getTimeTable} className={styles.btn}>Wed</li>
+                <li onClick={getTimeTable} className={styles.btn}>Thu</li>
+                <li onClick={getTimeTable} className={styles.btn}>Fri</li>
             </ul>
 
             <hr />
