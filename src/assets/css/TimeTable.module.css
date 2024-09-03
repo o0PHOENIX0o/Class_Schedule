@@ -16,8 +16,8 @@ hr{
 .Selectors {
    
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(3,4rem);
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,4rem);
     gap: 1rem;
     margin: 0;
     padding: 0;
