@@ -22,7 +22,6 @@ const Calendar = (props) => {
   }, []);
 
   useEffect(() => {
-    console.log('Selected date:', selectedDate);
     if(selectedDate){
       const day = new Date(new Date().getFullYear(),new Date().getMonth(),selectedDate).getDay();
       props.newSchedule(day);
@@ -42,7 +41,7 @@ const Calendar = (props) => {
 
   return (
     <div className={`${styles.date_picker}`}>
-            <h2><i className="fa-regular fa-calendar-days"></i> Calendar</h2>
+      <h2><i className="fa-regular fa-calendar-days"></i>Calendar</h2>
       <div className={styles.Calendar_container}>
         <div className={styles.Calendar_bg}>
           <div className={styles.calendar__Details}>
@@ -51,7 +50,7 @@ const Calendar = (props) => {
               <p>{formattedMonth}</p>
             </div>
             <div className={styles.Time}>
-              <p>{`${currentDate.getHours()} : ${currentDate.getMinutes()}`}</p>
+              <p>{new Date().toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true })}</p>
             </div>
           </div>
         </div>

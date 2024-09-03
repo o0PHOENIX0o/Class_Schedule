@@ -1,11 +1,14 @@
 import '../assets/css/index.css';
 import NavBar from '../Components/NavBar.jsx';
+import AboutContent from '../Components/AboutContent.jsx'
+import '../assets/css/index.css';
 
-function About() {    
+
+function About() {
     return (
         <div className="container">
             <NavBar />
-            "about"
+            <AboutContent />
         </div>
     );
 }
