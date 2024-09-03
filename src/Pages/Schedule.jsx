@@ -9,11 +9,11 @@ import { useMediaQuery } from "react-responsive";
 
 
 function Schedule() {
-    const DaysArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    
+   
+
     const [isCalendarVisible, setCalendarVisible] = useState(true);
     const [isIconCLicked, setIconCLicked] = useState(false);
-    const [Day, setNewDay] = useState(DaysArray[new Date().getDay()]);
+    const [Day, setNewDay] = useState(new Date().getDay());
     const isScreenWideEnough = useMediaQuery({ minWidth: 870 });
     const calendarRef = useRef(null);
 
@@ -52,7 +52,7 @@ function Schedule() {
 
 
     function handleClick(day){
-        setNewDay(DaysArray[day]);
+        setNewDay(day);
         console.log(day);
     }
 

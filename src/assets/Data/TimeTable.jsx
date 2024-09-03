@@ -207,51 +207,50 @@ const ScheduleData = {
   ]
 };
 
-const GetSchedule = function (day) {
-  if (day == "Sunday" || day == "Saturday")
-    return "";
-  return ScheduleData[day];
+const DaysArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+
+const GetSchedule = function (dayIndex) {
+  const day = DaysArray[dayIndex];
+  if (day === "Sunday" || day === "Saturday")
+      return [];
+  return ScheduleData[day] || [];
 }
 
-function isCurrentTimeWithinRange(periodStart, periodEnd) {
-  let currentTime = new Date().toLocaleTimeString('en-US', {
-      hour: 'numeric',
-      minute: '2-digit',
-      hour12: true
-  });
-
-  const [time, period] = currentTime.split(' ');
-  let [hour, min] = time.split(':').map(Number);
-
-  if (period === 'PM' && hour !== 12) {
-      hour += 12;
-  } else if (period === 'AM' && hour === 12) {
-      hour = 0;
+const getNextClass = function(current, dayIndex) {
+  // let hour = 13;
+  let hour = new Date().getHours();
+  if (hour > 18 || hour === 0) {
+      console.log("---------- next day --------------");
+      let day = DaysArray[(dayIndex + 1) % 7];
+      return ScheduleData[day][0] || { course: "No upcoming classes" };
+  } else {
+      console.log("---------- current day --------------");
+      let day = DaysArray[dayIndex];
+      if (current === -1) { return ScheduleData[day][0] || { course: "No classes today" }; }
+      return ScheduleData[day][current] || { course: "No more classes today" };
   }
+}
 
+
+function isCurrentTimeWithinRange(periodStart, periodEnd) {
+  let [hour, min] = [new Date().getHours(), new Date().getMinutes()];
+  // let [hour, min] = [13,30];
   const currentMinutes = hour * 60 + min;
 
   const [Shour, SminPeriod] = periodStart.split(' ');
   let [startHour, startMin] = Shour.split(':').map(Number);
+  if (SminPeriod === 'PM' && startHour !== 12) startHour += 12;
+  if (SminPeriod === 'AM' && startHour === 12) startHour = 0;
 
-  if (SminPeriod === 'PM' && startHour !== 12) {
-      startHour += 12;
-  } else if (SminPeriod === 'AM' && startHour === 12) {
-      startHour = 0;
-  }
-
-  const startMinutes = startHour * 60 + parseInt(startMin);
+  const startMinutes = startHour * 60 + startMin;
 
   const [Ehour, EminPeriod] = periodEnd.split(' ');
   let [endHour, endMin] = Ehour.split(':').map(Number);
+  if (EminPeriod === 'PM' && endHour !== 12) endHour += 12;
+  if (EminPeriod === 'AM' && endHour === 12) endHour = 0;
 
-  if (EminPeriod === 'PM' && endHour !== 12) {
-      endHour += 12;
-  } else if (EminPeriod === 'AM' && endHour === 12) {
-      endHour = 0;
-  }
-
-  const endMinutes = endHour * 60 + parseInt(endMin);
+  const endMinutes = endHour * 60 + endMin - 1;
 
   if (startMinutes <= endMinutes) {
       return currentMinutes >= startMinutes && currentMinutes <= endMinutes;
@@ -261,4 +260,4 @@ function isCurrentTimeWithinRange(periodStart, periodEnd) {
 }
 
 export default GetSchedule;
-export { isCurrentTimeWithinRange };
+export { isCurrentTimeWithinRange,getNextClass };

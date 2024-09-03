@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "../assets/css/Schedule.module.css";
-import GetSchedule,{isCurrentTimeWithinRange} from "../assets/Data/Schedule.jsx";
-
-
+import GetSchedule, { isCurrentTimeWithinRange, getNextClass } from "../assets/Data/TimeTable.jsx";
 
 function HighLightedContent({ selectedDay }) {
     const [Schedule, setSchedule] = useState([]);
@@ -10,46 +8,40 @@ function HighLightedContent({ selectedDay }) {
     const [nextClass, setNextClass] = useState({});
 
     useEffect(() => {
-        console.log("selectedDay---> ",selectedDay);
         const scheduleData = GetSchedule(selectedDay);
+        console.log(scheduleData)
         setSchedule(scheduleData);
-
     }, [selectedDay]);
 
     useEffect(() => {
         const currentIndex = Schedule.findIndex(period => isCurrentTimeWithinRange(period.start, period.end));
-        const currentPeriod = Schedule[currentIndex];
-        let nextPeriod = Schedule[0];
-    
+        let currentPeriod = {};
+        let nextPeriod = {};
+
         if (currentIndex !== -1) {
-            
-            if(currentIndex + 1 < Schedule.length ){
+            currentPeriod = Schedule[currentIndex];
+            if (currentIndex + 1 < Schedule.length) {
                 nextPeriod = Schedule[currentIndex + 1];
-        
-                if (nextPeriod) {
-                    const [NsubjectCode, NroomNo] = nextPeriod.course.split('/');
-                    const updatedNextPeriod = { ...nextPeriod, roomNo: NroomNo ? NroomNo.trim() : "" };
-                    setNextClass(updatedNextPeriod); 
-                    console.log("Next Period:", updatedNextPeriod);
+                if (nextPeriod.course === '') {
+                    nextPeriod = Schedule[currentIndex + 2] || { course: "No upcoming classes" };
                 }
-        
             }
-            
-            if (currentPeriod.course !== currentClass.course) {
-                const [subjectCode, roomNo] = currentPeriod.course.split('/');
-                const updatedPeriod = { ...currentPeriod, roomNo: roomNo ? roomNo.trim() : "" };
-                setCurrentClass(updatedPeriod);
-                console.log("Current Period:", updatedPeriod);
-            }
+        } else {
+            nextPeriod = getNextClass(currentIndex, selectedDay);
         }
 
-        if (nextPeriod) {
-            const [NsubjectCode, NroomNo] = nextPeriod.course.split('/');
-            const updatedNextPeriod = { ...nextPeriod, roomNo: NroomNo ? NroomNo.trim() : "" };
-            setNextClass(updatedNextPeriod); 
-            console.log("Next Period:", updatedNextPeriod);
+        console.log(currentIndex,currentPeriod);
+
+        if (currentPeriod.course !== currentClass.course) {
+            const [subjectCode, roomNo] = currentPeriod.course.split('/');
+            setCurrentClass({ ...currentPeriod, roomNo: roomNo ? roomNo.trim() : "" });
         }
-    }, [Schedule]);
+
+        if (nextPeriod.course && nextPeriod.course !== nextClass.course) {
+            const [NsubjectCode, NroomNo] = nextPeriod.course.split('/');
+            setNextClass({ ...nextPeriod, roomNo: NroomNo ? NroomNo.trim() : "" });
+        }
+    }, [Schedule, currentClass, nextClass]);
 
     return (
         <div className={styles.middle_column}>
@@ -87,7 +79,7 @@ function HighLightedContent({ selectedDay }) {
                     {Schedule.map((period, index) => {
                         if (!period.course) {
                             return (
-                                <p key={index} className={styles.break}> Break </p>
+                                <p key={index} className={`${styles.break} ${styles.active_class}`}> Break </p>
                             )
                         }
                         const isInRange = isCurrentTimeWithinRange(period.start, period.end);

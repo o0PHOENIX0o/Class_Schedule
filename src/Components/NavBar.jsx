@@ -6,7 +6,7 @@ import { Link, useLocation } from 'react-router-dom'
 
 function NavBar({onCalendarClick}){
     const location = useLocation();
-
+  
     let isMobile = useMediaQuery({minWidth: 1100});
     let hideCalendar = useMediaQuery({minWidth: 870});
     
@@ -46,9 +46,9 @@ function NavBar({onCalendarClick}){
                     </Link>  
                 </li>
                 
-                {!hideCalendar ? <li onClick={onCalendarClick} className={styles.Link}> 
+                {location.pathname == '/'? (!hideCalendar) ? <li onClick={onCalendarClick} className={styles.Link}> 
                     <i className="fa-regular fa-calendar-days"></i>
-                </li>: ""}
+                </li>: "" : ""}
             </ul>
         </div>
     )
