@@ -21,11 +21,23 @@
       "end": "1:30 PM"
     },
     {
-      "course": "ICT 209",
-      "name": "Object Oriented Programming Using C++ (OOP) Lab",
-      "room_no": "",
-      "start": "1:30 PM",
-      "end": "3:30 PM"
+      // update subject code
+      "A":{
+        "course": "ICT 209 / ETL312", 
+        "name": "Operating Systems (OS) Lab",
+        "shortName": "OS Lab",
+        "Faculty": "---",
+        "start": "1:30 PM",
+        "end": "3:30 PM"},
+
+      "B":{
+        "course": "ICT 209 / ETL313",
+        "name": "Object Oriented Programming Using C++ Lab",
+        "shortName": "OOP Lab",
+        "Faculty": "---",
+        "start": "1:30 PM",
+        "end": "3:30 PM"
+      }
     },
     {
       "course": "ICT 207",
