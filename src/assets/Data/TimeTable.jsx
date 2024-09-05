@@ -254,7 +254,6 @@ const ScheduleData = {
 
 const DaysArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-
 const GetSchedule = function (Group, dayIndex) {
   const day = DaysArray[dayIndex];
   if (day === "Sunday" || day === "Saturday")
@@ -277,15 +276,29 @@ const GetSchedule = function (Group, dayIndex) {
 
 const getNextClass = function (Group, current, dayIndex) {
   let hour = new Date().getHours();
+  let day = DaysArray[dayIndex];
+
   if (hour > 18 || hour === 0) {
-    let day = DaysArray[(dayIndex + 1) % 7];
-    return ScheduleData[day][0] || { course: "No upcoming classes" };
+    if (day === "Friday") {
+      day = "Monday";
+    } else {
+      day = DaysArray[(dayIndex + 1) % 7];
+      if (day === "Saturday") day = "Monday";
+      if (day === "Sunday") day = "Monday";
+    }
+    return GetSchedule(Group, DaysArray.indexOf(day))[0] || { course: "No upcoming classes" };
   } else {
-    let day = DaysArray[dayIndex];
-    if (current === -1) { return ScheduleData[day][0] || { course: "No classes today" }; }
-    return ScheduleData[day][current] || { course: "No more classes today" };
+    day = DaysArray[dayIndex];
+    let schedule = GetSchedule(Group, dayIndex);
+
+    if (current === -1) {
+      return schedule[0] || { course: "No classes today" };
+    }
+
+    return schedule[current] || { course: "No more classes today" };
   }
 }
+
 
 
 function isCurrentTimeWithinRange(periodStart, periodEnd) {
