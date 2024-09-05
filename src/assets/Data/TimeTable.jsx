@@ -67,7 +67,7 @@ const ScheduleData = {
       "course": "ECO 213 / E110",
       "name": "Engineering Economics ",
       "shortName": "ECO",
-      "Faculty": "TBA",
+      "Faculty": "---",
       "start": "9:00 AM",
       "end": "11:00 AM"
     },
@@ -107,7 +107,7 @@ const ScheduleData = {
       "course": "BC 123 / E110",
       "name": "Bridge Course in Programming in C",
       "shortName": "C",
-      "Faculty": "TBA",
+      "Faculty": "---",
       "start": "9:00 AM",
       "end": "11:00 AM"
     },
@@ -157,7 +157,7 @@ const ScheduleData = {
       "course": "BC 121 / E110",
       "name": "Bridge Course in Mathematics",
       "shortName": "Maths",
-      "Faculty": "TBA",
+      "Faculty": "Nikhat Ali",
       "start": "9:00 AM",
       "end": "10:00 AM"
     },
@@ -205,7 +205,7 @@ const ScheduleData = {
       "course": "BC 121 / E110",
       "name": "Bridge Course in Mathematics",
       "shortName": "Maths",
-      "Faculty": "TBA",
+      "Faculty": "Nikhat Ali",
       "start": "9:00 AM",
       "end": "11:00 AM"
     },
@@ -286,16 +286,16 @@ const getNextClass = function (Group, current, dayIndex) {
       if (day === "Saturday") day = "Monday";
       if (day === "Sunday") day = "Monday";
     }
-    return GetSchedule(Group, DaysArray.indexOf(day))[0] || { course: "No upcoming classes" };
+    return GetSchedule(Group, DaysArray.indexOf(day))[0] || { };
   } else {
     day = DaysArray[dayIndex];
     let schedule = GetSchedule(Group, dayIndex);
 
     if (current === -1) {
-      return schedule[0] || { course: "No classes today" };
+      return schedule[0] || { };
     }
 
-    return schedule[current] || { course: "No more classes today" };
+    return schedule[current] || { };
   }
 }
 
