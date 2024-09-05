@@ -17,20 +17,24 @@ function HighLightedContent({ selectedDay }) {
         const currentIndex = Schedule.findIndex(period => isCurrentTimeWithinRange(period.start, period.end));
         let currentPeriod = {};
         let nextPeriod = {};
-
+    
         if (currentIndex !== -1) {
             currentPeriod = Schedule[currentIndex];
-            if (currentIndex + 1 < Schedule.length) {
-                nextPeriod = Schedule[currentIndex + 1];
+            const nextIndex = currentIndex + 1;
+    
+            if (nextIndex < Schedule.length) {
+                nextPeriod = Schedule[nextIndex];
                 if (nextPeriod.course === '') {
-                    nextPeriod = Schedule[currentIndex + 2] || { course: "No upcoming classes" };
+                    nextPeriod = Schedule[nextIndex + 1] || { course: "No upcoming classes" };
                 }
+            } else {
+                nextPeriod = { course: "No upcoming classes" }; // Set a default message or object
             }
         } else {
             nextPeriod = getNextClass(Group, currentIndex, selectedDay);
         }
-
-
+    
+    
         if (currentPeriod.course !== currentClass.course) {
             const [subjectCode, roomNo] = currentPeriod.course.split('/');
             setCurrentClass({ ...currentPeriod, roomNo: roomNo ? roomNo.trim() : "" });
@@ -40,7 +44,7 @@ function HighLightedContent({ selectedDay }) {
             const [NsubjectCode, NroomNo] = nextPeriod.course.split('/');
             setNextClass({ ...nextPeriod, roomNo: NroomNo ? NroomNo.trim() : "" });
         }
-    }, [Group, Schedule, currentClass, nextClass]);
+    }, [Schedule, Group, selectedDay]);
 
 
     const GroupData = function(event){
