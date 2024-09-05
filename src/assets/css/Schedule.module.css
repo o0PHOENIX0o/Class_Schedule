@@ -269,12 +269,14 @@ strong {
 }
 
 .timeline_item:hover::after,
-.active_class::after {
+.active_class::after,
+.class_done::after {
     background: hsl(45deg 100% 50%);
     box-shadow: 0 0 7px 2px hsl(44.94deg 100% 50%);
 }
 .timeline_item:hover::before,
-.active_class::before {
+.active_class::before,
+.class_done::before{
     background: hsl(42deg 38.57% 49.27%) !important;
 }
 
