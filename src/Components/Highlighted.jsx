@@ -14,7 +14,7 @@ function HighLightedContent({ selectedDay }) {
     }, [Group,selectedDay]);
 
     useEffect(() => {
-        const currentIndex = Schedule.findIndex(period => isCurrentTimeWithinRange(period.start, period.end));
+        const currentIndex = Schedule.findIndex(period => isCurrentTimeWithinRange('',period.start, period.end));
         let currentPeriod = {};
         let nextPeriod = {};
     
@@ -28,7 +28,7 @@ function HighLightedContent({ selectedDay }) {
                     nextPeriod = Schedule[nextIndex + 1] || { course: "No upcoming classes" };
                 }
             } else {
-                nextPeriod = { course: "No upcoming classes" }; // Set a default message or object
+                nextPeriod = { course: "No upcoming classes" }; 
             }
         } else {
             nextPeriod = getNextClass(Group, currentIndex, selectedDay);
@@ -103,9 +103,10 @@ function HighLightedContent({ selectedDay }) {
                                 <p key={index} className={`${styles.break}`}> Break </p>
                             )
                         }
-                        const isInRange = isCurrentTimeWithinRange(period.start, period.end);
+                        const isInRange = isCurrentTimeWithinRange("", period.start, period.end);
+                        const isClassDone = isCurrentTimeWithinRange("isClassDone", period.start, period.end);
                         return (
-                            <li key={index} className={`${styles.timeline_item} ${isInRange ? styles.active_class : ""}`}>
+                            <li key={index} className={`${styles.timeline_item} ${isInRange ? styles.active_class : ""} ${!isClassDone ? styles.class_done : ""}`}>
                                 <h4 className={styles.timeline_item_title}>{period.start} - {period.end}</h4>
                                 <p className={styles.timeline_text}>{period.course}</p>
                                 <p className={styles.timeline_text}>{period.name}</p>

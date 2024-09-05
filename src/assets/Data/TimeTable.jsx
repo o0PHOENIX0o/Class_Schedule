@@ -301,9 +301,9 @@ const getNextClass = function (Group, current, dayIndex) {
 
 
 
-function isCurrentTimeWithinRange(periodStart, periodEnd) {
+function isCurrentTimeWithinRange(type, periodStart, periodEnd) {
   let [hour, min] = [new Date().getHours(), new Date().getMinutes()];
-  // let [hour, min] = [13,30];
+  // let [hour, min] = [8,30];
   const currentMinutes = hour * 60 + min;
 
   const [Shour, SminPeriod] = periodStart.split(' ');
@@ -320,9 +320,14 @@ function isCurrentTimeWithinRange(periodStart, periodEnd) {
 
   const endMinutes = endHour * 60 + endMin - 1;
 
+  
+  if(type==='isClassDone') {
+    return (currentMinutes <= startMinutes );
+  }
+
   if (startMinutes <= endMinutes) {
     return currentMinutes >= startMinutes && currentMinutes <= endMinutes;
-  } else {
+  } else{
     return currentMinutes >= startMinutes || currentMinutes <= endMinutes;
   }
 }
