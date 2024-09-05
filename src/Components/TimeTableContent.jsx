@@ -1,37 +1,67 @@
-import React,{useState} from "react";
+import React,{useState, useEffect} from "react";
 import styles from "../assets/css/TimeTable.module.css"
 import GetSchedule from '../assets/Data/TimeTable.jsx';
 
 const TimeTableContent = function(){
-    const [data,setData] = useState(GetSchedule(1));
-    const [title,settitle] = useState("Monday");
-    const DaysArray = ["Sunday", "Mon", "Tue", "Wed", "Thu", "Fri", "Saturday"];
+    const [data,setData] = useState(GetSchedule("B",1));
+    const [title,setTitle] = useState("Monday");
+    const [index,setIndex] = useState(1);
+    const [Group, setGroup] = useState("B");
+    
+    const DaysArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+    useEffect(() => {
+        setData(GetSchedule(Group,index));
+        setTitle(DaysArray[index]);
+    }, [Group,index])
+    
+
 
     const getTimeTable = function(event){
-        let element = event.target;
-        settitle(element.innerText);
-        const index = DaysArray.findIndex((day) => day === element.innerText);
-        setData(GetSchedule(index));
-        const activeElement = document.querySelector(`.${styles.activeBtn}`);
-        if (activeElement) 
-            activeElement.classList.remove(styles.activeBtn);
+        const dayIndex = event.target.id;
+        setIndex(dayIndex);
         
-        element.classList.add(styles.activeBtn);
+        document.querySelectorAll(`.${styles.btn}`).forEach(el => el.classList.remove(styles.activeBtn));
+        event.target.classList.add(styles.activeBtn);
     }
 
+    const GroupData = function(event){
+        setGroup(event.target.textContent);
+
+        document.querySelectorAll(`.${styles.Group_Item}`).forEach(el => el.classList.remove(styles.active_group));
+        event.target.classList.add(styles.active_group);
+    }
 
     return(
         <div className={styles.container}>
             <h1>Time Table</h1><hr />
             <ul className={styles.Selectors}>
-                <li onClick={getTimeTable} className={`${styles.btn}  ${styles.activeBtn}`}>Mon</li>
-                <li onClick={getTimeTable} className={styles.btn}>Tue</li>
-                <li onClick={getTimeTable} className={styles.btn}>Wed</li>
-                <li onClick={getTimeTable} className={styles.btn}>Thu</li>
-                <li onClick={getTimeTable} className={styles.btn}>Fri</li>
+                {DaysArray.map((d, i) => {
+                    return ((i !== 0 && i !== 6) && (
+                            <li
+                                key={i}
+                                id={i}
+                                onClick={getTimeTable}
+                                className={`${styles.btn} ${i === 1 ? styles.activeBtn : ''}`}
+                            >
+                                {d.slice(0, 3)}
+                            </li>
+                        
+                        )
+                    );
+                })}
             </ul>
 
             <hr />
+            <section className={styles.Group_Section}>
+               <div className={styles.Group_content}>
+                <h3>Group: </h3>
+               <ul className={styles.Group_List}> 
+                    <li onClick={GroupData} className={`${styles.Group_Item}`}>A</li>
+                    <li onClick={GroupData} className={`${styles.Group_Item} ${styles.active_group}`}>B</li>
+                </ul>
+               </div>
+            </section>
 
             <div className={styles.content}>
                 <div className={styles.title}>

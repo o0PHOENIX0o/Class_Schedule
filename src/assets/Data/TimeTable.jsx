@@ -25,20 +25,41 @@ const ScheduleData = {
       "end": "1:30 PM"
     },
     {
-      "course": "ICT 209 / ETL313",
-      "name": "Object Oriented Programming Using C++ Lab",
-      "shortName": "OOP Lab",
-      "Faculty": "---",
-      "start": "1:30 PM",
-      "end": "3:30 PM"
+      "A": {
+        "course": "ICT 203 / ETL312",
+        "name": "Operating Systems lab",
+        "shortName": "OS Lab",
+        "Faculty": "---",
+        "start": "1:30 PM",
+        "end": "3:30 PM"
+      },
+
+      "B": {
+        "course": "ICT 209 / ETL313",
+        "name": "Object Oriented Programming Using C++ Lab",
+        "shortName": "OOP Lab",
+        "Faculty": "---",
+        "start": "1:30 PM",
+        "end": "3:30 PM"
+      }
     },
     {
-      "course": "ICT 207 / ETL312",
-      "name": "Database Management System Lab",
-      "shortName": "DBMS Lab",
-      "Faculty": "---",
-      "start": "3:30 PM",
-      "end": "5:30 PM"
+      "A": {
+        "course": "ICT 211 / ETL313",
+        "name": "Data Structure Lab",
+        "shortName": "DS Lab",
+        "Faculty": "---",
+        "start": "3:30 PM",
+        "end": "5:30 PM"
+      },
+      "B": {
+        "course": "ICT 207 / ETL312",
+        "name": "Database Management System Lab",
+        "shortName": "DBMS Lab",
+        "Faculty": "---",
+        "start": "3:30 PM",
+        "end": "5:30 PM"
+      }
     }
   ],
   "Tuesday": [
@@ -113,12 +134,22 @@ const ScheduleData = {
       "end": "3:30 PM"
     },
     {
-      "course": "ICT 203 / E410",
-      "name": "Operating Systems Lab",
-      "shortName": "OS Lab",
-      "Faculty":"---",
-      "start": "3:30 PM",
-      "end": "5:30 PM"
+      "A": {
+        "course": "ICT 207 / E312",
+        "name": "Database Management System Lab",
+        "shortName": "DBMS Lab",
+        "Faculty": "---",
+        "start": "3:30 PM",
+        "end": "5:30 PM"
+      },
+      "B": {
+        "course": "ICT 203 / E410",
+        "name": "Operating Systems Lab",
+        "shortName": "OS Lab",
+        "Faculty": "---",
+        "start": "3:30 PM",
+        "end": "5:30 PM"
+      }
     }
   ],
   "Thursday": [
@@ -201,12 +232,22 @@ const ScheduleData = {
       "end": "3:30 PM"
     },
     {
-      "course": "ICT 211 / E219",
-      "name": "Data Structures Lab",
-      "shortName": "DS Lab",
-      "Faculty":"---",
-      "start": "3:30 PM",
-      "end": "5:30 PM"
+      "A": {
+        "course": "ICT 209 / E312",
+        "name": "Object Oriented Programming Using C++ Lab",
+        "shortName": "OOP Lab",
+        "Faculty": "---",
+        "start": "3:30 PM",
+        "end": "5:30 PM"
+      },
+      "B": {
+        "course": "ICT 211 / E219",
+        "name": "Data Structures Lab",
+        "shortName": "DS Lab",
+        "Faculty": "---",
+        "start": "3:30 PM",
+        "end": "5:30 PM"
+      }
     }
   ]
 };
@@ -214,23 +255,36 @@ const ScheduleData = {
 const DaysArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 
-const GetSchedule = function (dayIndex) {
+const GetSchedule = function (Group, dayIndex) {
   const day = DaysArray[dayIndex];
   if (day === "Sunday" || day === "Saturday")
-      return [];
-  return ScheduleData[day] || [];
+    return [];
+
+  let newData = [];
+  ScheduleData[day].forEach(element => {
+    if (element.A || element.B) {
+      let labData = element[Group];
+      newData.push({
+        ...labData
+      });
+    } else {
+      newData.push(element);
+    }
+  });
+  // console.log("getSchedule ---> ",Group, newData);
+
+  return newData || [];
 }
 
-const getNextClass = function(current, dayIndex) {
-  // let hour = 13;
+const getNextClass = function (Group, current, dayIndex) {
   let hour = new Date().getHours();
   if (hour > 18 || hour === 0) {
-      let day = DaysArray[(dayIndex + 1) % 7];
-      return ScheduleData[day][0] || { course: "No upcoming classes" };
+    let day = DaysArray[(dayIndex + 1) % 7];
+    return ScheduleData[day][0] || { course: "No upcoming classes" };
   } else {
-      let day = DaysArray[dayIndex];
-      if (current === -1) { return ScheduleData[day][0] || { course: "No classes today" }; }
-      return ScheduleData[day][current] || { course: "No more classes today" };
+    let day = DaysArray[dayIndex];
+    if (current === -1) { return ScheduleData[day][0] || { course: "No classes today" }; }
+    return ScheduleData[day][current] || { course: "No more classes today" };
   }
 }
 
@@ -255,11 +309,11 @@ function isCurrentTimeWithinRange(periodStart, periodEnd) {
   const endMinutes = endHour * 60 + endMin - 1;
 
   if (startMinutes <= endMinutes) {
-      return currentMinutes >= startMinutes && currentMinutes <= endMinutes;
+    return currentMinutes >= startMinutes && currentMinutes <= endMinutes;
   } else {
-      return currentMinutes >= startMinutes || currentMinutes <= endMinutes;
+    return currentMinutes >= startMinutes || currentMinutes <= endMinutes;
   }
 }
 
 export default GetSchedule;
-export { isCurrentTimeWithinRange,getNextClass };
+export { isCurrentTimeWithinRange, getNextClass };

@@ -6,11 +6,12 @@ function HighLightedContent({ selectedDay }) {
     const [Schedule, setSchedule] = useState([]);
     const [currentClass, setCurrentClass] = useState({});
     const [nextClass, setNextClass] = useState({});
+    const [Group, SetGroup] = useState("B");
 
     useEffect(() => {
-        const scheduleData = GetSchedule(selectedDay);
-        setSchedule(scheduleData);
-    }, [selectedDay]);
+        const scheduleData = GetSchedule(Group, selectedDay);
+        setSchedule(scheduleData); 
+    }, [Group,selectedDay]);
 
     useEffect(() => {
         const currentIndex = Schedule.findIndex(period => isCurrentTimeWithinRange(period.start, period.end));
@@ -26,7 +27,7 @@ function HighLightedContent({ selectedDay }) {
                 }
             }
         } else {
-            nextPeriod = getNextClass(currentIndex, selectedDay);
+            nextPeriod = getNextClass(Group, currentIndex, selectedDay);
         }
 
 
@@ -39,7 +40,15 @@ function HighLightedContent({ selectedDay }) {
             const [NsubjectCode, NroomNo] = nextPeriod.course.split('/');
             setNextClass({ ...nextPeriod, roomNo: NroomNo ? NroomNo.trim() : "" });
         }
-    }, [Schedule, currentClass, nextClass]);
+    }, [Group, Schedule, currentClass, nextClass]);
+
+
+    const GroupData = function(event){
+        let element = event.target;
+        SetGroup(element.textContent);
+        document.querySelectorAll(`.${element.className}`).forEach(el => el.classList.remove(styles.active_group));
+        element.classList.add(styles.active_group);
+    }
 
     return (
         <div className={styles.middle_column}>
@@ -66,6 +75,16 @@ function HighLightedContent({ selectedDay }) {
                 </div>
             </div>
 
+            <section className={styles.Group_Section}>
+               <div className={styles.Group_Content}>
+                <h3>Group: </h3>
+               <ul className={styles.Group_List}> 
+                    <li onClick={GroupData} className={`${styles.Group_Item}`}>A</li>
+                    <li onClick={GroupData} className={`${styles.Group_Item} ${styles.active_group}`}>B</li>
+                </ul>
+               </div>
+            </section>
+            
             <section className={styles.timeline}>
                 <div className={styles.title_wrapper}>
                     <div className={styles.icon_box}>
