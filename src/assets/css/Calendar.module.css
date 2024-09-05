@@ -120,6 +120,9 @@ h2,h3,p{
 
 
 
+.date_picker h2 i {
+  padding: 0 1rem;
+}
 .date_picker {
   top: 60px;
   bottom: 0;
