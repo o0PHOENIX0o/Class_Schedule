@@ -9,10 +9,7 @@ const Syllabus_content = function(){
         let element = event.target;
         const newData = GetSyllabusData(element.innerText);
         setData(newData);
-        const activeElement = document.querySelector(`.${styles.activeBtn}`);
-        if (activeElement) 
-            activeElement.classList.remove(styles.activeBtn);
-        
+        document.querySelectorAll(`.${element.className}`).forEach(el => el.classList.remove(styles.activeBtn));
         element.classList.add(styles.activeBtn);
     }
 

@@ -21,7 +21,6 @@
       "end": "1:30 PM"
     },
     {
-      // update subject code
       "A":{
         "course": "ICT 209 / ETL312", 
         "name": "Operating Systems (OS) Lab",
