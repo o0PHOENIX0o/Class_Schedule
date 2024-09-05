@@ -13,6 +13,7 @@ hr{
     background: #1e1e1f;
     padding: 1rem;
     border-radius: 1rem;
+    max-width: 50rem;
 }
 
 
@@ -21,9 +22,6 @@ h1 {
     margin-bottom: 20px;
 }
 
-p {
-    margin-bottom: 20px;
-}
 
 a {
     color: hsl(45, 100%, 72%);

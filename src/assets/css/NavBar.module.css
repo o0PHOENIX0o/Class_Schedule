@@ -60,6 +60,10 @@
     width: 20px;
 }
 
+.Link p{
+    margin: 0;
+}
+
 .nav_bar ul li:hover i,
 .activeNavBar{
     background-color: #4e4e4e;

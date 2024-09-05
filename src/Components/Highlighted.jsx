@@ -76,7 +76,7 @@ function HighLightedContent({ selectedDay }) {
             </div>
 
             <section className={styles.Group_Section}>
-               <div className={styles.Group_Content}>
+               <div className={styles.Group_content}>
                 <h3>Group: </h3>
                <ul className={styles.Group_List}> 
                     <li onClick={GroupData} className={`${styles.Group_Item}`}>A</li>

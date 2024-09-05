@@ -271,7 +271,6 @@ const GetSchedule = function (Group, dayIndex) {
       newData.push(element);
     }
   });
-  // console.log("getSchedule ---> ",Group, newData);
 
   return newData || [];
 }
