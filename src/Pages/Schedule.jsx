@@ -52,7 +52,9 @@ function Schedule() {
 
 
     function handleClick(day){
-        setNewDay(day);
+        if(day !== 0 && day !== 6){
+            setNewDay(day);
+        }
     }
 
 
