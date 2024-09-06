@@ -96,7 +96,7 @@ function HighLightedContent({ selectedDay }) {
                     </div>
                 </div>
 
-                <ul className={styles.timeline_list}>
+                <ul className={`${styles.timeline_list} ${!(Schedule.length > 0)? styles.active_img : ""}`}>
                     {(Schedule.length > 0) ? Schedule.map((period, index) => {
                         if (!period.course) {
                             return (
