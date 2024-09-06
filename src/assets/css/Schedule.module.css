@@ -232,26 +232,27 @@ strong {
     text-underline-offset: 0.25rem;
 }
 
-.timeline_item:not(:last-child)::before {
+.timeline_item::before {
     content: "";
     position: absolute;
-    top: -25px;
+    top: 0;
     left: -30px;
     width: 1px;
-    height: calc(100% + 50px);
-    background: hsl(0, 0%, 22%);
+    height: calc(100% + 20px);
+    background: #383838;
 }
 
 .timeline_item::after {
     content: "";
     position: absolute;
-    top: 15px;
+    top: 50%;
+    transform: translateY(-50%);
     left: -33px;
     height: 6px;
     width: 6px;
-    background: hsl(45, 100%, 72%);
+    background: #ffdb70;
     border-radius: 50%;
-    box-shadow: 0 0 0 4px hsl(0, 0%, 22%);
+    box-shadow: 0 0 0 4px #383838;
 }
 
 .timeline_text {
