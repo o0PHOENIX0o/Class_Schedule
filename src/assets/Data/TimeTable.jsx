@@ -103,14 +103,16 @@ const ScheduleData = {
     }
   ],
   "Wednesday": [
+
     {
-      "course": "BC 123 / E110",
-      "name": "Bridge Course in Programming in C",
-      "shortName": "C",
-      "Faculty": "---",
+      "course": "BC 121 / E110",
+      "name": "Bridge Course in Mathematics",
+      "shortName": "Maths",
+      "Faculty": "Nikhat Ali",
       "start": "9:00 AM",
       "end": "11:00 AM"
     },
+   
     {
       "course": "ICT 203 / E110",
       "name": "Operating Systems",
@@ -201,14 +203,16 @@ const ScheduleData = {
     }
   ],
   "Friday": [
+    
     {
-      "course": "BC 121 / E110",
-      "name": "Bridge Course in Mathematics",
-      "shortName": "Maths",
-      "Faculty": "Nikhat Ali",
+      "course": "BC 123 / E110",
+      "name": "Bridge Course in Programming in C",
+      "shortName": "C",
+      "Faculty": "---",
       "start": "9:00 AM",
       "end": "11:00 AM"
     },
+
     {
       "course": "ICT 201 / E110",
       "name": "Foundation of Computer Science",
