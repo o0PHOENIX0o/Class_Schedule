@@ -97,7 +97,7 @@ function HighLightedContent({ selectedDay }) {
                 </div>
 
                 <ul className={styles.timeline_list}>
-                    {Schedule.map((period, index) => {
+                    {(Schedule.length > 0) ? Schedule.map((period, index) => {
                         if (!period.course) {
                             return (
                                 <p key={index} className={`${styles.break}`}> Break </p>
@@ -112,7 +112,7 @@ function HighLightedContent({ selectedDay }) {
                                 <p className={styles.timeline_text}>{period.name}</p>
                             </li>
                         )
-                    })}
+                    }) : (<img src="https://lh3.googleusercontent.com/WvToiAYCASMZTZZ-YOpoDKtC0UOnFFUqyjLnfuKrYcLKf8sqi8h99GWZNYQZucUhcuvql_7qwg337yQkgkhGcTS69GU=s1280-w1280-h800"/>)}
                 </ul>
             </section>
         </div>
