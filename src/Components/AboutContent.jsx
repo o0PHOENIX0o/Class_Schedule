@@ -25,6 +25,7 @@ const AboutContent = function(){
 
                 <div className={style.social_icons}>
                     <a href="https://github.com/o0PHOENIX0o" target="_blank"><i className="fab fa-github"></i></a>
+                    <a href="https://ujjwal-lehri.vercel.app" target="_blank"><i class="fa-regular fa-user fa-sm"></i></a>
                     <a href="https://www.linkedin.com/in/ujjwal-lehri" target="_blank"><i className="fab fa-linkedin"></i></a>
                     <a href="mailto:your-ujjwallehri@33.com"><i className="fas fa-envelope"></i></a>
                 </div>
