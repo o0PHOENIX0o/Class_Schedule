@@ -334,3 +334,8 @@ strong {
     color: black;
     font-weight: bold;
 }
+
+
+.active_img{
+    padding: 0;
+}
