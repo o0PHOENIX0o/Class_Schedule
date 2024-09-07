@@ -1,6 +1,7 @@
 import React,{useState} from "react";
 import styles from "../assets/css/Syllabus_content.module.css"
 import GetSyllabusData from '../assets/Data/Syllabus.jsx';
+import Resources from "./Resources.jsx";
 
 const Syllabus_content = function(){
     const [data,setData] = useState(GetSyllabusData('FCS'));
@@ -12,6 +13,8 @@ const Syllabus_content = function(){
         document.querySelectorAll(`.${element.className}`).forEach(el => el.classList.remove(styles.activeBtn));
         element.classList.add(styles.activeBtn);
     }
+
+    
 
 
     return(
@@ -60,6 +63,13 @@ const Syllabus_content = function(){
                 </div>
 
             </div>
+            <hr />
+            <section>
+                <div className={styles.title}> 
+                    <h2>Resources </h2>
+                </div>
+                <Resources/>
+            </section>
         </div>
     )
 }
