@@ -113,3 +113,14 @@ hr{
     margin-bottom: 8px;
     color: #ccc;
 }
+
+
+@media (max-width: 450px) {
+    .Selectors {
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .btn{
+        padding: 0;
+    }
+}
