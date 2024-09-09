@@ -1,4 +1,4 @@
-import styles from "../assets/css/resources.module.css";
+import styles from "../assets/css/Resources.module.css";
 
 const resourceData=[
     {
