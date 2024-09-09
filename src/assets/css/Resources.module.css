@@ -34,3 +34,7 @@
     color: black;
     font-weight: bold;
 }
+
+.Selectors a{
+    margin-bottom: 1rem;
+}
