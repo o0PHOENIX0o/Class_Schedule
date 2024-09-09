@@ -29,5 +29,5 @@ A simple React web app to help students in the CSE branch keep track of their cl
     ```
 4. Run the app:
     ```bash
-    npm start
+    npm run dev
     ```
