@@ -1,7 +1,23 @@
 {
     "rewrites": [
       {
-        "source": "/(.*)",
+        "source": "/",
+        "destination": "/"
+      },
+      {
+        "source": "/home",
+        "destination": "/"
+      },
+      {
+        "source": "/syllabus",
+        "destination": "/"
+      },
+      {
+        "source": "/timetable",
+        "destination": "/"
+      },
+      {
+        "source": "/about",
         "destination": "/"
       }
     ]
