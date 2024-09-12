@@ -1,19 +1,24 @@
-import React,{useState} from "react";
+import React,{useState, useEffect} from "react";
 import styles from "../assets/css/Syllabus_content.module.css"
 import GetSyllabusData from '../assets/Data/Syllabus.jsx';
 import Resources from "./Resources.jsx";
 
 const Syllabus_content = function(){
     const [data,setData] = useState(GetSyllabusData('FCS'));
+    const [subject,SetSub] = useState("FCS");
 
     const getSylabus = function(event){
         let element = event.target;
         const newData = GetSyllabusData(element.innerText);
+        SetSub(element.innerText);
         setData(newData);
         document.querySelectorAll(`.${element.className}`).forEach(el => el.classList.remove(styles.activeBtn));
         element.classList.add(styles.activeBtn);
     }
 
+    // useEffect(()=>{
+    //     setData("FCS");
+    // },[subject])
     
 
 
@@ -68,7 +73,7 @@ const Syllabus_content = function(){
                 <div className={styles.title}> 
                     <h2>Resources </h2>
                 </div>
-                <Resources/>
+                <Resources subject={subject}/>
             </section>
         </div>
     )
