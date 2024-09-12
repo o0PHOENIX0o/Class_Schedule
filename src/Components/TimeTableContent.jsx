@@ -3,13 +3,14 @@ import styles from "../assets/css/TimeTable.module.css"
 import GetSchedule from '../assets/Data/TimeTable.jsx';
 
 const TimeTableContent = function(){
+    const DaysArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    
     const [data,setData] = useState(GetSchedule("B",new Date().getDay()));
-    const [title,setTitle] = useState("Monday");
-    const [index,setIndex] = useState(1);
+    const [title,setTitle] = useState(DaysArray[new Date().getDay())]);
+    const [index,setIndex] = useState(new Date().getDay()));
     const [Group, setGroup] = useState("B");
     
-    const DaysArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
+    
     useEffect(() => {
         setData(GetSchedule(Group,index));
         setTitle(DaysArray[index]);
