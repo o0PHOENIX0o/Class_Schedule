@@ -34,14 +34,14 @@ function NavBar({onCalendarClick}){
                 </li>
                 <li>
                     <Link to="/syllabus" className={`${styles.Link} `}>
-                        <div className={`${styles.IconImage} ${getActiveClass('/Syllabus')}`}><img src={Syllabus} alt="Syllabus" /></div>
+                        <div className={`${styles.IconImage} ${getActiveClass('/syllabus')}`}><img src={Syllabus} alt="Syllabus" /></div>
                         {isMobile ?  <p>Syllabus</p> : ""}
                     </Link>                    
                 </li>
                 <li>
                     <Link to="/timetable" className={`${styles.Link}`}>
                         
-                        <div className={`${styles.IconImage} ${getActiveClass('/TimeTable')}`}><img src={TimeTable} alt="TimeTable" /></div>
+                        <div className={`${styles.IconImage} ${getActiveClass('/timetable')}`}><img src={TimeTable} alt="TimeTable" /></div>
                         {isMobile ?  <p>Time Table</p> : ""}  
                     </Link>  
                 </li>
@@ -49,7 +49,7 @@ function NavBar({onCalendarClick}){
                 <li>
                    
                 <Link to="/about" className={`${styles.Link}`} >
-                        <div className={`${styles.IconImage} ${getActiveClass('/About')}`}><img src={About} alt="About" /></div>
+                        <div className={`${styles.IconImage} ${getActiveClass('/about')}`}><img src={About} alt="About" /></div>
                         {isMobile ?  <p>About</p> : ""}
                     </Link>  
                 </li>
