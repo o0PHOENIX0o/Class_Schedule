@@ -45,12 +45,17 @@ a:hover {
     align-items: center;
 }
 
-.social_icons a {
-    color: hsl(45, 100%, 72%);;
-    font-size: 24px;
-    transition: color 0.3s;
+.social_icons a svg{
+    transition: fill 0.3s;
 }
 
-.social_icons a:hover {
-    color: #ffffff; 
+
+.social_icons a svg{
+    height:25px;
+    fill: #ffdb70;
+}
+
+
+.social_icons a:hover svg {
+    fill: #ffffff; 
 }

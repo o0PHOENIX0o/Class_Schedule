@@ -2,6 +2,12 @@ import React from "react"
 import styles from "../assets/css/NavBar.module.css"
 import {useMediaQuery} from "react-responsive";
 
+import Home from '/Home.svg';
+import Syllabus from '/Syllabus.svg';
+import TimeTable from '/TimeTable.svg';
+import About from '/About.svg';
+import Calendar from '/Calendar.svg';
+
 import { Link, useLocation } from 'react-router-dom'
 
 function NavBar({onCalendarClick}){
@@ -20,34 +26,34 @@ function NavBar({onCalendarClick}){
             <ul>
                 <li>
                    
-                    <Link to="/" className={styles.Link}>
-                        <i className={`fa-solid fa-house ${getActiveClass('/')}`}></i>
+                    <Link to="/" className={`${styles.Link} ${getActiveClass('/')}`}>
+                        <img src={Home} alt="Home" />
                         {isMobile ?  <p>Home</p> : ""}
                     </Link>
                 </li>
                 <li>
-                    <Link to="/Syllabus" className={styles.Link}>
-                        <i className={`fa-solid fa-align-left ${getActiveClass('/Syllabus')}`}></i>
+                    <Link to="/Syllabus" className={`${styles.Link} ${getActiveClass('/Syllabus')}`}>
+                        <img src={Syllabus} alt="Syllabus" />
                         {isMobile ?  <p>Syllabus</p> : ""}
                     </Link>                    
                 </li>
                 <li>
-                    <Link to="/TimeTable" className={styles.Link}>
-                        <i className={`fa-solid fa-table-list ${getActiveClass('/TimeTable')}`}></i>
+                    <Link to="/TimeTable" className={`${styles.Link} ${getActiveClass('/TimeTable')}`}>
+                        <img src={TimeTable} alt="TimeTable" />
                         {isMobile ?  <p>Time Table</p> : ""}  
                     </Link>  
                 </li>
                 
                 <li>
                    
-                    <Link to="/About" className={styles.Link} >
-                        <i className={`fa-solid fa-user ${getActiveClass('/About')}`}></i>
+                <Link to="/About" className={`${styles.Link} ${getActiveClass('/About')}`} >
+                        <img src={About} alt="About" />
                         {isMobile ?  <p>About</p> : ""}
                     </Link>  
                 </li>
                 
                 {location.pathname == '/'? (!hideCalendar) ? <li onClick={onCalendarClick} className={styles.Link}> 
-                    <i className="fa-regular fa-calendar-days"></i>
+                    <img src={Calendar} alt="Calendar" />
                 </li>: "" : ""}
             </ul>
         </div>

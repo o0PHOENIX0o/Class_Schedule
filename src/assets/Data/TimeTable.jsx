@@ -14,7 +14,7 @@ const ScheduleData = {
       "course": "ICT 211 / E110",
       "name": "Data Structures",
       "shortName": "DS",
-      "Faculty": "Navin Rajpal",
+      "Faculty": "Prof. Navin Rajpal",
       "start": "11:00 AM",
       "end": "1:00 PM"
     },
@@ -29,7 +29,7 @@ const ScheduleData = {
         "course": "ICT 203 / ETL312",
         "name": "Operating Systems lab",
         "shortName": "OS Lab",
-        "Faculty": "---",
+        "Faculty": "prof. Ravindra Purwa",
         "start": "1:30 PM",
         "end": "3:30 PM"
       },
@@ -38,7 +38,7 @@ const ScheduleData = {
         "course": "ICT 209 / ETL313",
         "name": "Object Oriented Programming Using C++ Lab",
         "shortName": "OOP Lab",
-        "Faculty": "---",
+        "Faculty": "Dr Priyanka Bhutani",
         "start": "1:30 PM",
         "end": "3:30 PM"
       }
@@ -48,7 +48,7 @@ const ScheduleData = {
         "course": "ICT 211 / ETL313",
         "name": "Data Structure Lab",
         "shortName": "DS Lab",
-        "Faculty": "---",
+        "Faculty": "bhul gaya",
         "start": "3:30 PM",
         "end": "5:30 PM"
       },
@@ -89,7 +89,7 @@ const ScheduleData = {
       "course": "ICT 203 / E110",
       "name": "Operating Systems",
       "shortName": "OS",
-      "Faculty": "bhul gaya",
+      "Faculty": "prof. Ravindra Purwa",
       "start": "1:30 PM",
       "end": "2:30 PM"
     },
@@ -97,7 +97,7 @@ const ScheduleData = {
       "course": "ICT 209 / E110",
       "name": "Object Oriented Programming Using C++",
       "shortName": "OOP",
-      "Faculty": "bhul gaya",
+      "Faculty": "Dr Priyanka Bhutani",
       "start": "2:30 PM",
       "end": "4:30 PM"
     }
@@ -117,7 +117,7 @@ const ScheduleData = {
       "course": "ICT 203 / E110",
       "name": "Operating Systems",
       "shortName": "OS",
-      "Faculty": "bhul gaya",
+      "Faculty": "prof. Ravindra Purwa",
       "start": "11:00 AM",
       "end": "1:00 PM"
     },
@@ -148,7 +148,7 @@ const ScheduleData = {
         "course": "ICT 203 / E410",
         "name": "Operating Systems Lab",
         "shortName": "OS Lab",
-        "Faculty": "---",
+        "Faculty": "prof. Ravindra Purwa",
         "start": "3:30 PM",
         "end": "5:30 PM"
       }
@@ -175,7 +175,7 @@ const ScheduleData = {
       "course": "ICT 211 / E110",
       "name": "Data Structures",
       "shortName": "DS",
-      "Faculty": "Navin Rajpal",
+      "Faculty": "Prof. Navin Rajpal",
       "start": "11:00 AM",
       "end": "1:00 PM"
     },
@@ -189,7 +189,7 @@ const ScheduleData = {
       "course": "ICT 207 / E110",
       "name": "Database Management System",
       "shortName": "DBMS",
-      "Faculty": "Prof. Udayan Ghose",
+      "Faculty": "Ms. Richa",
       "start": "1:30 PM",
       "end": "3:30 PM"
     },
@@ -197,7 +197,7 @@ const ScheduleData = {
       "course": "ICT 209 / E110",
       "name": "Object Oriented Programming Using C++",
       "shortName": "OOP",
-      "Faculty": "bhul gaya",
+      "Faculty": "Dr Priyanka Bhutani",
       "start": "3:30 PM",
       "end": "5:30 PM"
     }
@@ -231,7 +231,7 @@ const ScheduleData = {
       "course": "ICT 207 / E110",
       "name": "Database Management System",
       "shortName": "DBMS",
-      "Faculty": "Prof. Udayan Ghose",
+      "Faculty": "Ms. Richa",
       "start": "1:30 PM",
       "end": "3:30 PM"
     },
@@ -240,7 +240,7 @@ const ScheduleData = {
         "course": "ICT 209 / E312",
         "name": "Object Oriented Programming Using C++ Lab",
         "shortName": "OOP Lab",
-        "Faculty": "---",
+        "Faculty": "Dr Priyanka Bhutani",
         "start": "3:30 PM",
         "end": "5:30 PM"
       },
@@ -248,7 +248,7 @@ const ScheduleData = {
         "course": "ICT 211 / E219",
         "name": "Data Structures Lab",
         "shortName": "DS Lab",
-        "Faculty": "---",
+        "Faculty": "bhul gaya",
         "start": "3:30 PM",
         "end": "5:30 PM"
       }
