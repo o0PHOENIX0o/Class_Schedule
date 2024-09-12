@@ -108,7 +108,7 @@ const ScheduleData = {
       "course": "BC 121 / E601",
       "name": "Bridge Course in Mathematics",
       "shortName": "Maths",
-      "Faculty": "Nikhat Ali",
+      "Faculty": "Ms. Nikhat Ali",
       "start": "9:00 AM",
       "end": "11:00 AM"
     },

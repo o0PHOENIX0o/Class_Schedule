@@ -26,34 +26,36 @@ function NavBar({onCalendarClick}){
             <ul>
                 <li>
                    
-                    <Link to="/" className={`${styles.Link} ${getActiveClass('/')}`}>
-                        <img src={Home} alt="Home" />
+                    <Link to="/" className={`${styles.Link} `}>
+                        
+                        <div className={` ${styles.IconImage} ${getActiveClass('/')}`}><img src={Home} alt="Home" /></div>
                         {isMobile ?  <p>Home</p> : ""}
                     </Link>
                 </li>
                 <li>
-                    <Link to="/Syllabus" className={`${styles.Link} ${getActiveClass('/Syllabus')}`}>
-                        <img src={Syllabus} alt="Syllabus" />
+                    <Link to="/Syllabus" className={`${styles.Link} `}>
+                        <div className={`${styles.IconImage} ${getActiveClass('/Syllabus')}`}><img src={Syllabus} alt="Syllabus" /></div>
                         {isMobile ?  <p>Syllabus</p> : ""}
                     </Link>                    
                 </li>
                 <li>
-                    <Link to="/TimeTable" className={`${styles.Link} ${getActiveClass('/TimeTable')}`}>
-                        <img src={TimeTable} alt="TimeTable" />
+                    <Link to="/TimeTable" className={`${styles.Link}`}>
+                        
+                        <div className={`${styles.IconImage} ${getActiveClass('/TimeTable')}`}><img src={TimeTable} alt="TimeTable" /></div>
                         {isMobile ?  <p>Time Table</p> : ""}  
                     </Link>  
                 </li>
                 
                 <li>
                    
-                <Link to="/About" className={`${styles.Link} ${getActiveClass('/About')}`} >
-                        <img src={About} alt="About" />
+                <Link to="/About" className={`${styles.Link}`} >
+                        <div className={`${styles.IconImage} ${getActiveClass('/About')}`}><img src={About} alt="About" /></div>
                         {isMobile ?  <p>About</p> : ""}
                     </Link>  
                 </li>
                 
                 {location.pathname == '/'? (!hideCalendar) ? <li onClick={onCalendarClick} className={styles.Link}> 
-                    <img src={Calendar} alt="Calendar" />
+                    <div className={`${styles.IconImage}`}><img src={Calendar} alt="Calendar" /></div>
                 </li>: "" : ""}
             </ul>
         </div>

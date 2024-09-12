@@ -114,7 +114,7 @@ const SyllabusData = {
     "Subject": "Data Structures",
     "ShortName": "DS",
     "Credit": "4",
-    "Faculty": "Navin Rajpal",
+    "Faculty": "Prof. Navin Rajpal",
     "SubjectCode": "ICT 211",
     "syllabus": [
       {
@@ -171,7 +171,7 @@ const SyllabusData = {
     "Subject": "Object Oriented Programming Using c++",
     "ShortName": "OOP",
     "Credit": "4",
-    "Faculty": "bhul gaya",
+    "Faculty": "Dr Priyanka Bhutani",
     "SubjectCode": "ICT 209",
     "syllabus": [
       {
@@ -265,7 +265,7 @@ const SyllabusData = {
     "Subject": "Database Management System",
     "ShortName": "DBMS",
     "Credit": "4",
-    "Faculty": "Prof. Udayan Ghose",
+    "Faculty": "Ms. Richa",
     "SubjectCode": "ICT 207",
     "syllabus": [
       {
@@ -356,7 +356,7 @@ const SyllabusData = {
     "Subject": "Operating Systems",
     "ShortName": "OS",
     "Credit": "3",
-    "Faculty": "bhul gaya",
+    "Faculty": "prof. Ravindra Purwa",
     "SubjectCode": "ICT 203",
     "syllabus": [
       {
@@ -640,7 +640,7 @@ const SyllabusData = {
     "Subject": "Bridge Course in Mathematics",
     "ShortName": "Maths",
     "Credit": "0",
-    "Faculty": "TBA",
+    "Faculty": "Ms. Nikhat Ali",
     "SubjectCode": "BC 121",
     "syllabus": [
       {
