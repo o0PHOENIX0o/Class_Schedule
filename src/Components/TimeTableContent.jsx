@@ -3,7 +3,7 @@ import styles from "../assets/css/TimeTable.module.css"
 import GetSchedule from '../assets/Data/TimeTable.jsx';
 
 const TimeTableContent = function(){
-    const [data,setData] = useState(GetSchedule("B",1));
+    const [data,setData] = useState(GetSchedule("B",new Date().getDay()));
     const [title,setTitle] = useState("Monday");
     const [index,setIndex] = useState(1);
     const [Group, setGroup] = useState("B");
