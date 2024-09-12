@@ -33,13 +33,13 @@ function NavBar({onCalendarClick}){
                     </Link>
                 </li>
                 <li>
-                    <Link to="/Syllabus" className={`${styles.Link} `}>
+                    <Link to="/syllabus" className={`${styles.Link} `}>
                         <div className={`${styles.IconImage} ${getActiveClass('/Syllabus')}`}><img src={Syllabus} alt="Syllabus" /></div>
                         {isMobile ?  <p>Syllabus</p> : ""}
                     </Link>                    
                 </li>
                 <li>
-                    <Link to="/TimeTable" className={`${styles.Link}`}>
+                    <Link to="/timetable" className={`${styles.Link}`}>
                         
                         <div className={`${styles.IconImage} ${getActiveClass('/TimeTable')}`}><img src={TimeTable} alt="TimeTable" /></div>
                         {isMobile ?  <p>Time Table</p> : ""}  
@@ -48,7 +48,7 @@ function NavBar({onCalendarClick}){
                 
                 <li>
                    
-                <Link to="/About" className={`${styles.Link}`} >
+                <Link to="/about" className={`${styles.Link}`} >
                         <div className={`${styles.IconImage} ${getActiveClass('/About')}`}><img src={About} alt="About" /></div>
                         {isMobile ?  <p>About</p> : ""}
                     </Link>  
