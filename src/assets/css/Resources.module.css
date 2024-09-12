@@ -1,28 +1,28 @@
 
 .Selectors {
     display: flex;
-    /* grid-template-columns: repeat(3, 1fr); */
-    /* grid-template-rows: repeat(2, 4rem); */
     gap: 1rem;
     margin: 0;
     padding: 0;
+    padding-top: 2rem;
+    flex-wrap: wrap;
 }
 
 .btn {
-    list-style:none;
+    list-style: none;
     padding: 1rem;
     border-radius: 1rem;
     background-color: #333;
     display: flex;
     justify-content: center;
-    align-items: center;
     cursor: pointer;
     transition: all 0.3s;
     box-shadow: inset 0px 1px 3px 1px rgb(121 121 121);
-
     word-wrap: break-word;
     max-width: 126rem;
     word-break: break-all;
+    align-items: center;
+    height: 3rem;
       
 }
 
@@ -36,5 +36,5 @@
 }
 
 .Selectors a{
-    margin-bottom: 1rem;
+    flex-basis: 8rem;
 }
