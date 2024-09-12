@@ -5,13 +5,8 @@ import GetSchedule from '../assets/Data/TimeTable.jsx';
 const TimeTableContent = function(){
     const DaysArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     
-    // const [data,setData] = useState(GetSchedule("B",1));
     const [data,setData] = useState(GetSchedule("B",new Date().getDay()));
-
-    // const [title,setTitle] = useState("Monday"); DaysArray[new Date().getDay())]
     const [title,setTitle] = useState(DaysArray[new Date().getDay()]);
-    
-    // const [index,setIndex] = useState(1);
     const [index,setIndex] = useState(new Date().getDay());
     const [Group, setGroup] = useState("B");
     
