@@ -85,10 +85,16 @@ const resourceData = {
 };
 
 const Resources = ({ subject }) => {
+    console.log(subject);
+    if(subject==="" || !(subject in resourceData)){
+        return(
+            <h4>unavailable</h4>
+        )
+    }
     return (
         <>
             <h4>Please note that the provided resources (including notes, links, or other content) are not my own, and I take no responsibility for their accuracy or content. If you find any errors or issues, feel free to contact me</h4>
-            {subject && <ul className={styles.Selectors}>
+            <ul className={styles.Selectors}>
                 {resourceData[subject].map((data, i) => {
                     return (
                         <a
@@ -100,7 +106,7 @@ const Resources = ({ subject }) => {
                         </a>
                     );
                 })}
-            </ul>}
+            </ul>
         </>
     )
 }
