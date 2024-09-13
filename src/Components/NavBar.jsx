@@ -2,11 +2,11 @@ import React from "react"
 import styles from "../assets/css/NavBar.module.css"
 import {useMediaQuery} from "react-responsive";
 
-import Home from '/Home.svg';
-import Syllabus from '/Syllabus.svg';
-import TimeTable from '/TimeTable.svg';
-import About from '/About.svg';
-import Calendar from '/Calendar.svg';
+import Home from '/SVG/Home.svg';
+import Syllabus from '/SVG/Syllabus.svg';
+import TimeTable from '/SVG/TimeTable.svg';
+import About from '/SVG/About.svg';
+import Calendar from '/SVG/Calendar.svg';
 
 import { Link, useLocation } from 'react-router-dom'
 
