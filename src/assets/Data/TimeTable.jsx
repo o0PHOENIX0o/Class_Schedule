@@ -260,6 +260,7 @@ const DaysArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Frid
 
 const GetSchedule = function (Group, dayIndex) {
   const day = DaysArray[dayIndex];
+  console.log(day);
   if (day === "Sunday" || day === "Saturday")
     return [];
 
