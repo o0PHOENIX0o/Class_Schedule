@@ -86,7 +86,7 @@ const resourceData = {
 
 const LinksData = [
     {
-        "title": "Tentative DateSheet",
+        "title": "Tentative Minor 1 Date Sheet",
         "url" : "https://docs.google.com/document/d/1LSpR1P7IwmunF0rD428wFR0xSxhCTsKMdNQFwCzVpXI/edit?usp=sharing"
     },
     {   
