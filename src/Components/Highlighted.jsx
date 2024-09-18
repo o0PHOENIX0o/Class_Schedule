@@ -15,6 +15,7 @@ function HighLightedContent({ selectedDay }) {
 
     useEffect(() => {
         const currentIndex = Schedule.findIndex(period => isCurrentTimeWithinRange('',period.start, period.end));
+        console.log(Schedule, currentIndex);
         let currentPeriod = {};
         let nextPeriod = {};
     
@@ -35,7 +36,7 @@ function HighLightedContent({ selectedDay }) {
         }
     
     
-        if (currentPeriod.course !== currentClass.course) {
+        if (currentClass.course && currentPeriod.course !== currentClass.course) {
             const [subjectCode, roomNo] = currentPeriod.course.split('/');
             setCurrentClass({ ...currentPeriod, roomNo: roomNo ? roomNo.trim() : "" });
         }
