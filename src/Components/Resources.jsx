@@ -84,6 +84,17 @@ const resourceData = {
     ]
 };
 
+const LinksData = [
+    {
+        "title": "Tentative DateSheet",
+        "url" : "https://docs.google.com/document/d/1LSpR1P7IwmunF0rD428wFR0xSxhCTsKMdNQFwCzVpXI/edit?usp=sharing"
+    },
+    {   
+        "title": "DS programs",
+        "url": "https://github.com/o0PHOENIX0o/CSE"
+    }
+];
+
 const Resources = ({ subject }) => {
     console.log(subject);
     if(subject==="" || !(subject in resourceData)){
@@ -112,3 +123,4 @@ const Resources = ({ subject }) => {
 }
 
 export default Resources
+export {LinksData}
