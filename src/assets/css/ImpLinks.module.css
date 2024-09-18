@@ -1,0 +1,26 @@
+
+.LinksContainer{
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+  
+   
+    overflow: hidden;
+  
+    
+    box-shadow: 1px 1px 10px rgb(0, 0,0, 65%);
+    
+  
+    min-height: 15rem; */
+    padding: 1rem;
+    background-color: #1e1e1f;
+    border-radius: 1rem;
+}
+
+.LinksContainerTitle{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}

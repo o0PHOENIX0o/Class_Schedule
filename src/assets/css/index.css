@@ -29,10 +29,28 @@ h1,p{
 }
 
 
+.RightSideBar{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.ABS{
+  display: flex;
+    gap: 2rem;
+    flex-grow: 1;
+}
 
 @media (max-width: 450px) {
   .container{
     flex-direction: column;
     margin:0;
+  }
+}
+
+
+@media (max-width: 870px) {
+  .ABS{
+    flex-direction: column;
   }
 }

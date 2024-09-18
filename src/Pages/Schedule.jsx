@@ -4,6 +4,7 @@ import '../assets/css/index.css';
 import NavBar from '../Components/NavBar.jsx';
 import Highlighted from '../Components/Highlighted.jsx'
 import MyCalendar from '../Components/Calendar.jsx';
+import ImpLinks from '../Components/ImpLinks.jsx';
 
 import { useMediaQuery } from "react-responsive";
 
@@ -62,13 +63,20 @@ function Schedule() {
         <div className="container">
             <NavBar onCalendarClick={toggleCalendarVisibility} />
             
-            <Highlighted selectedDay={Day}/>
+            <div className='ABS'>
+                <Highlighted selectedDay={Day}/>
 
-            {isCalendarVisible && (
-                <div ref={calendarRef}>
-                    <MyCalendar newSchedule={handleClick}/>
+                <div className='RightSideBar'>
+                    {isCalendarVisible && (
+                        <div ref={calendarRef}>
+                            <MyCalendar newSchedule={handleClick}/>
+                        </div>
+                    )}
+                    <ImpLinks></ImpLinks>
                 </div>
-            )}
+            </div>
+            
+
         </div>
     );
 }
