@@ -91,7 +91,7 @@
 
 
 @media (max-width:1100px) {
-    .nav_bar{
+    .nav_bar , .nav_bar ul{
         width: unset !important;
     }
 }
