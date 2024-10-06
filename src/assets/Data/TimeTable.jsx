@@ -1,7 +1,7 @@
 const ScheduleData = { 
   "Monday": [
     {
-      "course": "ICT 201 / E110",
+      "course": "ICT 201 / ---",
       "name": "Foundation of Computer Science Exam",
       "shortName": "FCS Exam",
       "Faculty": "Dr. Rinkaj Goyal",
@@ -11,7 +11,7 @@ const ScheduleData = {
   ],
   "Tuesday": [
     {
-      "course": "ICT 203 / ETL312",
+      "course": "ICT 203 / ---",
       "name": "Operating Systems Exam",
       "shortName": "OS Exam",
       "Faculty": "prof. Ravindra Purwa",
@@ -24,14 +24,14 @@ const ScheduleData = {
       "name": "Digital Logic and Computer Design Exam",
       "shortName": "DLCD Exam",
       "Faculty": "TBA",
-      "course": "ICT 205 / E110",
+      "course": "ICT 205 / ---",
       "start": "10:00 AM",
       "end": "11:00 AM"
     }
   ],
   "Thursday": [
     {
-      "course": "ICT 207 / E110",
+      "course": "ICT 207 / ---",
       "name": "Database Management System Exam",
       "shortName": "DBMS Exam",
       "Faculty": "Ms. Richa",
@@ -39,7 +39,7 @@ const ScheduleData = {
       "end": "11:00 AM"
     },
     {
-      "course": "ICT 211 / E110",
+      "course": "ICT 211 / ---",
       "name": "Data Structures Exam",
       "shortName": "DS Exam",
       "Faculty": "Prof. Navin Rajpal",
@@ -49,7 +49,7 @@ const ScheduleData = {
   ],
   "Friday": [
     {
-      "course": "ICT 209 / E110",
+      "course": "ICT 209 / ---",
       "name": "Object Oriented Programming Using C++ Exam",
       "shortName": "OOP Exam",
       "Faculty": "Dr Priyanka Bhutani",
