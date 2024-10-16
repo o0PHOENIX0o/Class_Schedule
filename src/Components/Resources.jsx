@@ -86,8 +86,8 @@ const resourceData = {
 
 const LinksData = [
     {
-        "title": "Tentative Minor 1 Date Sheet",
-        "url" : "https://docs.google.com/document/d/1LSpR1P7IwmunF0rD428wFR0xSxhCTsKMdNQFwCzVpXI/edit?usp=sharing"
+        "title": "CMSC 451 Design and Analysis of Computer Algorithms1",
+        "url" : "https://www.cs.umd.edu/class/fall2017/cmsc451-0101/Lects/cmsc451-fall17-lects.pdf"
     },
     {   
         "title": "DS programs",
