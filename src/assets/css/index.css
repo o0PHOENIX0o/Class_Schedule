@@ -33,6 +33,7 @@ h1,p{
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  max-width: 18rem;
 }
 
 .ABS{
@@ -52,5 +53,9 @@ h1,p{
 @media (max-width: 870px) {
   .ABS{
     flex-direction: column;
+  }
+
+  .RightSideBar{
+    max-width: -webkit-fill-available;
   }
 }
