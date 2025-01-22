@@ -1,271 +1,293 @@
-const ScheduleData = {
+const Schedule = {
   "Monday": [
-    {
-      "name": "Digital Logic and Computer Design",
-      "shortName": "DLCD",
-      "Faculty": "TBA",
-      "course": "ICT 205 / E110",
-      "start": "9:00 AM",
-      "end": "11:00 AM"
+    { 
+      "course": "ICT 210/RS/ECR110" ,
+      "Time": "9:00 AM - 11:00 AM"
     },
-    {
-      "course": "ICT 211 / E110",
-      "name": "Data Structures",
-      "shortName": "DS",
-      "Faculty": "Prof. Navin Rajpal",
-      "start": "11:00 AM",
-      "end": "1:00 PM"
+    { 
+      "course": "ICT 202/RRK/ECR110" ,
+      "Time": "11:00 AM - 1:00 PM"
     },
     {
       "course": "",
       "name": "Break",
-      "start": "1:00 PM",
-      "end": "1:30 PM"
+      "Time": "1:00 PM - 1:30 PM"
     },
     {
-      "A": {
-        "course": "ICT 203 / ETL312",
-        "name": "Operating Systems lab",
-        "shortName": "OS Lab",
-        "Faculty": "prof. Ravindra Purwa",
-        "start": "1:30 PM",
-        "end": "3:30 PM"
+      "A": { 
+        "course": "ICT 256/RA/ETL503",
+        "Time": "1:30 PM - 3:30 PM"
       },
-
-      "B": {
-        "course": "ICT 209 / ETL313",
-        "name": "Object Oriented Programming Using C++ Lab",
-        "shortName": "OOP Lab",
-        "Faculty": "Dr Priyanka Bhutani",
-        "start": "1:30 PM",
-        "end": "3:30 PM"
+      "B": { 
+        "course": "ICT 254/AC/ETL506",
+        "Time": "1:30 PM - 3:30 PM"
       }
     },
-    {
-      "A": {
-        "course": "ICT 211 / ETL313",
-        "name": "Data Structure Lab",
-        "shortName": "DS Lab",
-        "Faculty": "bhul gaya",
-        "start": "3:30 PM",
-        "end": "5:30 PM"
-      },
-      "B": {
-        "course": "ICT 207 / ETL312",
-        "name": "Database Management System Lab",
-        "shortName": "DBMS Lab",
-        "Faculty": "---",
-        "start": "3:30 PM",
-        "end": "5:30 PM"
-      }
+    { 
+      "course": "ICT 212/MBK/ECR215",
+      "Time": "3:30 PM - 5:30 PM"
     }
   ],
   "Tuesday": [
-    {
-      "course": "ECO 213 / E110",
-      "name": "Engineering Economics ",
-      "shortName": "ECO",
-      "Faculty": "---",
-      "start": "9:00 AM",
-      "end": "11:00 AM"
+    { 
+      "course": "ICT 210/RS/ECR110" ,
+      "Time": "11:00 AM - 12:00 PM"
     },
-    {
-      "course": "ICT 201 / E110",
-      "name": "Foundation of Computer Science",
-      "shortName": "FCS",
-      "Faculty": "Dr. Rinkaj Goyal",
-      "start": "11:00 AM",
-      "end": "1:00 PM"
+    { 
+      "course": "ICT 202/RRK/ECR110" ,
+      "Time": "12:00 PM - 1:00 PM"
     },
     {
       "course": "",
       "name": "Break",
-      "start": "1:00 PM",
-      "end": "1:30 PM"
+      "Time": "1:00 PM - 1:30 PM"
     },
     {
-      "course": "ICT 203 / E110",
-      "name": "Operating Systems",
-      "shortName": "OS",
-      "Faculty": "prof. Ravindra Purwa",
-      "start": "1:30 PM",
-      "end": "2:30 PM"
+      "A": { 
+        "course": "ICT 252/MBK/ETL503",
+        "Time": "1:30 PM - 3:30 PM"
+      },
+      "B": { 
+        "course": "ICT 260/RS/ETL219",
+        "Time": "1:30 PM - 3:30 PM"
+      }
     },
     {
-      "course": "ICT 209 / E110",
-      "name": "Object Oriented Programming Using C++",
-      "shortName": "OOP",
-      "Faculty": "Dr Priyanka Bhutani",
-      "start": "2:30 PM",
-      "end": "4:30 PM"
+      "A": { 
+        "course": "ICT 260/RS/ETL219",
+        "Time": "3:30 PM - 5:30 PM"
+      },
+      "B": { 
+        "course": "ICT 252/MBK/ETL503",
+        "Time": "3:30 PM - 5:30 PM"
+      }
     }
   ],
   "Wednesday": [
-
     {
-      "course": "BC 121 / E601",
-      "name": "Bridge Course in Mathematics",
-      "shortName": "Maths",
-      "Faculty": "Ms. Nikhat Ali",
-      "start": "9:00 AM",
-      "end": "11:00 AM"
-    },
-   
-    {
-      "course": "ICT 203 / E110",
-      "name": "Operating Systems",
-      "shortName": "OS",
-      "Faculty": "prof. Ravindra Purwa",
-      "start": "11:00 AM",
-      "end": "1:00 PM"
+      "A": { 
+        "course": "ICT 258/RRK/ETL410",
+        "Time": "11:00 PM - 1:00 PM"
+      },
+      "B": { 
+        "course": "ICT 254/RS/ETL506",
+        "Time": "11:00 PM - 1:00 PM"
+      }
     },
     {
       "course": "",
       "name": "Break",
-      "start": "1:00 PM",
-      "end": "1:30 PM"
+      "Time": "1:00 PM - 1:30 PM"
+    },
+    { 
+      "course": "MS214/GF/ECR215" ,
+      "Time": "1:30 PM - 3:30 PM"
     },
     {
-      "course": "ICT 205 / E110",
-      "name": "Digital Logic and Computer Design",
-      "shortName": "DLCD",
-      "Faculty": "TBA",
-      "start": "1:30 PM",
-      "end": "3:30 PM"
+      "course": "ICT 208/AH/ECR215",
+      "Time": "3:30 PM - 5:30 PM"
     },
-    {
-      "A": {
-        "course": "ICT 207 / E312",
-        "name": "Database Management System Lab",
-        "shortName": "DBMS Lab",
-        "Faculty": "---",
-        "start": "3:30 PM",
-        "end": "5:30 PM"
-      },
-      "B": {
-        "course": "ICT 203 / E410",
-        "name": "Operating Systems Lab",
-        "shortName": "OS Lab",
-        "Faculty": "prof. Ravindra Purwa",
-        "start": "3:30 PM",
-        "end": "5:30 PM"
-      }
-    }
   ],
   "Thursday": [
-    {
-      "course": "BC 121 / E110",
-      "name": "Bridge Course in Mathematics",
-      "shortName": "Maths",
-      "Faculty": "Nikhat Ali",
-      "start": "9:00 AM",
-      "end": "10:00 AM"
+    { 
+      "course": "ICT 208/AH/ECR110" ,
+      "Time": "9:00 AM - 11:00 AM"
     },
-    {
-      "course": "BC 123 / E110",
-      "name": "Bridge Course in Programming in C",
-      "shortName": "C",
-      "Faculty": "TBA",
-      "start": "10:00 AM",
-      "end": "11:00 AM"
-    },
-    {
-      "course": "ICT 211 / E110",
-      "name": "Data Structures",
-      "shortName": "DS",
-      "Faculty": "Prof. Navin Rajpal",
-      "start": "11:00 AM",
-      "end": "1:00 PM"
+    { 
+      "course": "ICT 204/PC/ECR110" ,
+      "Time": "11:00 AM - 1:00 PM"
     },
     {
       "course": "",
       "name": "Break",
-      "start": "1:00 PM",
-      "end": "1:30 PM"
+      "Time": "1:00 PM - 1:30 PM"
     },
-    {
-      "course": "ICT 207 / E110",
-      "name": "Database Management System",
-      "shortName": "DBMS",
-      "Faculty": "Ms. Richa",
-      "start": "1:30 PM",
-      "end": "3:30 PM"
+    { 
+      "course": "ICT 206/AC/ECR215" ,
+      "Time": "1:30 PM - 3:30 PM"
     },
-    {
-      "course": "ICT 209 / E110",
-      "name": "Object Oriented Programming Using C++",
-      "shortName": "OOP",
-      "Faculty": "Dr Priyanka Bhutani",
-      "start": "3:30 PM",
-      "end": "5:30 PM"
+    { 
+      "course": "ICT 212/MBK/ECR215",
+      "Time": "3:30 PM - 5:30 PM"
     }
   ],
   "Friday": [
-    
-    {
-      "course": "BC 123 / E110",
-      "name": "Bridge Course in Programming in C",
-      "shortName": "C",
-      "Faculty": "---",
-      "start": "9:00 AM",
-      "end": "11:00 AM"
-    },
 
     {
-      "course": "ICT 201 / E110",
-      "name": "Foundation of Computer Science",
-      "shortName": "FCS",
-      "Faculty": "Dr. Rinkaj Goyal",
-      "start": "11:00 AM",
-      "end": "1:00 PM"
+      "A": { 
+        "course": "ICT 256/PC/ETL503",
+        "Time": "11:00 PM - 1:00 PM"
+      },
+      "B": { 
+        "course": "ICT 258/RRK/ETL410",
+        "Time": "11:00 PM - 1:00 PM"
+      }
     },
     {
       "course": "",
       "name": "Break",
-      "start": "1:00 PM",
-      "end": "1:30 PM"
+      "Time": "1:00 PM - 1:30 PM"
     },
-    {
-      "course": "ICT 207 / E110",
-      "name": "Database Management System",
-      "shortName": "DBMS",
-      "Faculty": "Ms. Richa",
-      "start": "1:30 PM",
-      "end": "3:30 PM"
+    { 
+      "course": "ICT 206/AC/ECR215" ,
+      "Time": "1:30 PM - 3:30 PM"
     },
-    {
-      "A": {
-        "course": "ICT 209 / E312",
-        "name": "Object Oriented Programming Using C++ Lab",
-        "shortName": "OOP Lab",
-        "Faculty": "Dr Priyanka Bhutani",
-        "start": "3:30 PM",
-        "end": "5:30 PM"
-      },
-      "B": {
-        "course": "ICT 211 / E219",
-        "name": "Data Structures Lab",
-        "shortName": "DS Lab",
-        "Faculty": "bhul gaya",
-        "start": "3:30 PM",
-        "end": "5:30 PM"
-      }
+    { 
+      "course": "ICT 204/PC/ECR215",
+      "Time": "3:30 PM - 5:30 PM"
     }
   ]
+}
+
+
+const Faculty = {
+  "PC": "Prof. Pravin Chandra",
+  "RRK": "Prof. R. Rama Kishore",
+  "MBK": "Prof. M. Balakrishna",
+  "AC": "Dr. Anuradha Chug",
+  "RS": "Dr. Ruchi Sehrawat",
+  "RA": "Dr. Richa Aggarwal",
+  "AH": "Dr. Arshi Husain",
+  "GF": "Dr. Ashima Negi"
+};
+
+const courses = {
+  // Theory
+  "ICT 202": {
+    name: "Computer Graphics",
+    shortName: "CG",
+    credits: 3
+  },
+  "ICT 204": {
+    name: "Computational Methods",
+    shortName: "CM",
+    credits: 4
+  },
+  "ICT 206": {
+    name: "Design and Analysis of Algorithms",
+    shortName: "DAA",
+    credits: 4
+  },
+  "ICT 208": {
+    name: "Theory of Computation",
+    shortName: "TOC",
+    credits: 4
+  },
+  "ICT 210": {
+    name: "Software Engineering",
+    shortName: "SE",
+    credits: 3
+  },
+  "ICT 212": {
+    name: "Computer Networks",
+    shortName: "CN",
+    credits: 4
+  },
+  "MS214": {
+    name: "Accountancy for Engineers",
+    shortName: "AE",
+    credits: 2
+  },
+  
+
+
+  // Practical
+  "ICT 252": {
+    name: "Computer Networks Lab",
+    shortName: "CN",
+    credits: 1
+  },
+  "ICT 254": {
+    name: "Design and Analysis of Algorithms Lab",
+    shortName: "DAA",
+    credits: 1
+  },
+  "ICT 256": {
+    name: "Computational Methods Lab",
+    shortName: "CM",
+    credits: 1
+  },
+  "ICT 258": {
+    name: "Computer Graphics Lab",
+    shortName: "CG",
+    credits: 1
+  },
+  "ICT 260": {
+    name: "Software Engineering Lab",
+    shortName: "SE",
+    credits: 1
+  }
+};
+
+
+let ScheduleData = {};
+for(const ele in Schedule){
+  ScheduleData[ele] = Schedule[ele].map(items =>{
+    if(items.course){
+      let [Time, end] = items.Time.split("-");
+      let [code, prof, room] = items.course.split("/");
+      return {
+        course: code + " / "+ room,
+        name: courses[code].name,
+        shortName: courses[code].shortName,
+        Faculty : Faculty[prof],
+        start: Time,
+        end: end
+      };
+    }
+    
+    if(items.name == "Break"){
+      let [Time, end] = items.Time.split("-");
+      delete items.Time;
+      return {...items, start: Time, end:end};      
+    }
+
+    if(items.A && items.B){
+
+      let [startA, endA] = items.A.Time.split("-");
+      let [startB, endB] = items.A.Time.split("-");
+      let [codeA, profA, roomA] = items.A.course.split("/");
+      let [codeB, profB, roomB] = items.B.course.split("/");
+
+      const ObjA = {
+        course: codeA + " / "+ roomA,
+        name: courses[codeA].name,
+        shortName: courses[codeA].shortName,
+        Faculty : Faculty[profA],
+        start: startA,
+        end: endA
+      };
+      const ObjB = {
+        course: codeB + " / "+ roomB,
+        name: courses[codeB].name,
+        shortName: courses[codeB].shortName,
+        Faculty : Faculty[profB],
+        start: startB,
+        end: endB
+      };
+
+      return {
+        A: ObjA,
+        B: ObjB
+      };
+    }
+  }); 
 };
 
 const DaysArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 const GetSchedule = function (Group, dayIndex) {
   const day = DaysArray[dayIndex];
-  console.log(day);
+  // console.log(day);
   if (day === "Sunday" || day === "Saturday")
     return [];
 
   let newData = [];
+  // console.log("day schedule: ", ScheduleData[day]);
   ScheduleData[day].forEach(element => {
     if (element.A || element.B) {
       let labData = element[Group];
+      // console.log("labData : ", labData);
       newData.push({
         ...labData
       });
@@ -273,6 +295,8 @@ const GetSchedule = function (Group, dayIndex) {
       newData.push(element);
     }
   });
+
+  // console.log("---> " ,newData);
 
   return newData || [];
 }
@@ -305,6 +329,7 @@ const getNextClass = function (Group, current, dayIndex) {
 
 
 function isCurrentTimeWithinRange(type, periodStart, periodEnd) {
+  // console.log("isCurrentTimeWithinRange: ", type, periodStart, periodEnd);
   let [hour, min] = [new Date().getHours(), new Date().getMinutes()];
   // let [hour, min] = [8,30];
   const currentMinutes = hour * 60 + min;
@@ -334,6 +359,7 @@ function isCurrentTimeWithinRange(type, periodStart, periodEnd) {
     return currentMinutes >= startMinutes || currentMinutes <= endMinutes;
   }
 }
+GetSchedule("B", 2);
 
 export default GetSchedule;
-export { isCurrentTimeWithinRange, getNextClass };
+export { isCurrentTimeWithinRange, getNextClass, courses };

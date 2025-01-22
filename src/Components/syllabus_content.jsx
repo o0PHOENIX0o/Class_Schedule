@@ -1,11 +1,12 @@
 import React,{useState, useEffect} from "react";
 import styles from "../assets/css/Syllabus_content.module.css"
 import GetSyllabusData from '../assets/Data/Syllabus.jsx';
+import { courses } from "../assets/Data/TimeTable.jsx";
 import Resources from "./Resources.jsx";
 
 const Syllabus_content = function(){
-    const [data,setData] = useState(GetSyllabusData('FCS'));
-    const [subject,SetSub] = useState("FCS");
+    const [data,setData] = useState(GetSyllabusData('CG'));
+    const [subject,SetSub] = useState("CG");
 
     const getSylabus = function(event){
         let element = event.target;
@@ -17,7 +18,7 @@ const Syllabus_content = function(){
     }
 
     // useEffect(()=>{
-    //     setData("FCS");
+    //     setData("CG");
     // },[subject])
     
 
@@ -27,15 +28,13 @@ const Syllabus_content = function(){
             <h1>Syllabus</h1><hr />
 
             <ul className={styles.Selectors}>
-                <li onClick={getSylabus} className={`${styles.btn}  ${styles.activeBtn}`}>FCS</li>
-                <li onClick={getSylabus} className={styles.btn}>DS</li>
-                <li onClick={getSylabus} className={styles.btn}>OS</li>
-                <li onClick={getSylabus} className={styles.btn}>OOP</li>
-                <li onClick={getSylabus} className={styles.btn}>DBMS</li>
-                <li onClick={getSylabus} className={styles.btn}>DLCD</li>
-                <li onClick={getSylabus} className={styles.btn}>ECO</li>
-                <li onClick={getSylabus} className={styles.btn}>C</li>
-                <li onClick={getSylabus} className={styles.btn}>Maths</li>
+                <li onClick={getSylabus} className={`${styles.btn}  ${styles.activeBtn}`}>CG</li>
+                <li onClick={getSylabus} className={styles.btn}>CM</li>
+                <li onClick={getSylabus} className={styles.btn}>DAA</li>
+                <li onClick={getSylabus} className={styles.btn}>TOC</li>
+                <li onClick={getSylabus} className={styles.btn}>SE</li>
+                <li onClick={getSylabus} className={styles.btn}>CN</li>
+                <li onClick={getSylabus} className={styles.btn}>AE</li>
             </ul>
             <hr />
 

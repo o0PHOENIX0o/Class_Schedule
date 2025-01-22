@@ -12,7 +12,6 @@ const TimeTableContent = function(){
     
 
     useEffect(() => {
-        console.log()
         setData(GetSchedule(Group,index));
         setTitle(DaysArray[index]);
     }, [Group,index])

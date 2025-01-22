@@ -96,7 +96,7 @@ const LinksData = [
 ];
 
 const Resources = ({ subject }) => {
-    console.log(subject);
+    // console.log(subject);
     if(subject==="" || !(subject in resourceData)){
         return(
             <h4>unavailable</h4>

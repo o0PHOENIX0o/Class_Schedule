@@ -1,7 +1,4 @@
-
-
-
-const SyllabusData = {
+{
   "CG": {
     "Subject": "Computer Graphics",
     "ShortName": "CG",
@@ -450,11 +447,4 @@ const SyllabusData = {
       }
     ]
   }
-};
-
-const GetSyllabusData = function(subject){
-  // console.log("syllabus: ",subject, SyllabusData[subject]);
-    return SyllabusData[subject];
 }
-
-export default GetSyllabusData;
