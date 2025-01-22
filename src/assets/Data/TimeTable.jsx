@@ -80,7 +80,7 @@ const Schedule = {
       "Time": "1:00 PM - 1:30 PM"
     },
     { 
-      "course": "MS214/GF/ECR215" ,
+      "course": "MS214/AN/ECR215" ,
       "Time": "1:30 PM - 3:30 PM"
     },
     {
@@ -148,7 +148,7 @@ const Faculty = {
   "RS": "Dr. Ruchi Sehrawat",
   "RA": "Dr. Richa Aggarwal",
   "AH": "Dr. Arshi Husain",
-  "GF": "Dr. Ashima Negi"
+  "AN": "Dr. Ashima Negi"
 };
 
 const courses = {
