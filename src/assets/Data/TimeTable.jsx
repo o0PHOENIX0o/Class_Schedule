@@ -194,27 +194,27 @@ const courses = {
   // Practical
   "ICT 252": {
     name: "Computer Networks Lab",
-    shortName: "CN",
+    shortName: "CN Lab",
     credits: 1
   },
   "ICT 254": {
     name: "Design and Analysis of Algorithms Lab",
-    shortName: "DAA",
+    shortName: "DAA Lab",
     credits: 1
   },
   "ICT 256": {
     name: "Computational Methods Lab",
-    shortName: "CM",
+    shortName: "CM Lab",
     credits: 1
   },
   "ICT 258": {
     name: "Computer Graphics Lab",
-    shortName: "CG",
+    shortName: "CG Lab",
     credits: 1
   },
   "ICT 260": {
     name: "Software Engineering Lab",
-    shortName: "SE",
+    shortName: "SE Lab",
     credits: 1
   }
 };
@@ -224,7 +224,7 @@ let ScheduleData = {};
 for(const ele in Schedule){
   ScheduleData[ele] = Schedule[ele].map(items =>{
     if(items.course){
-      let [Time, end] = items.Time.split("-");
+      let [Time, end] = items.Time.split(" - ");
       let [code, prof, room] = items.course.split("/");
       return {
         course: code + " / "+ room,
@@ -237,15 +237,15 @@ for(const ele in Schedule){
     }
     
     if(items.name == "Break"){
-      let [Time, end] = items.Time.split("-");
+      let [Time, end] = items.Time.split(" - ");
       delete items.Time;
       return {...items, start: Time, end:end};      
     }
 
     if(items.A && items.B){
 
-      let [startA, endA] = items.A.Time.split("-");
-      let [startB, endB] = items.A.Time.split("-");
+      let [startA, endA] = items.A.Time.split(" - ");
+      let [startB, endB] = items.A.Time.split(" - ");
       let [codeA, profA, roomA] = items.A.course.split("/");
       let [codeB, profB, roomB] = items.B.course.split("/");
 

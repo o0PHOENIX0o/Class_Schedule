@@ -14,8 +14,12 @@ function HighLightedContent({ selectedDay }) {
     }, [Group,selectedDay]);
 
     useEffect(() => {
-        const currentIndex = Schedule.findIndex(period => isCurrentTimeWithinRange('',period.start, period.end));
-        console.log(Schedule, currentIndex);
+        const currentIndex = Schedule.findIndex(period => {
+            let res = isCurrentTimeWithinRange('',period.start, period.end)
+            // console.log(res, period.start, period.end);
+            return res;
+        });
+        // console.log(Schedule, currentIndex);
         let currentPeriod = {};
         let nextPeriod = {};
     
@@ -37,13 +41,13 @@ function HighLightedContent({ selectedDay }) {
     
     
         if (currentPeriod.course  && currentPeriod.course !== currentClass.course) {
-            console.log("currentPeriod ----> ", currentPeriod);
+            // console.log("currentPeriod ----> ", currentPeriod);
             const [subjectCode, roomNo] = currentPeriod.course.split('/');
             setCurrentClass({ ...currentPeriod, roomNo: roomNo ? roomNo.trim() : "" });
         }
 
         if (nextPeriod.course && nextPeriod.course !== nextClass.course) {
-            console.log("nextPeriod ----> ", nextPeriod);
+            // console.log("nextPeriod ----> ", nextPeriod);
             const [NsubjectCode, NroomNo] = nextPeriod.course.split('/');
             setNextClass({ ...nextPeriod, roomNo: NroomNo ? NroomNo.trim() : "" });
         }

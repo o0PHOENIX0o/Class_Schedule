@@ -4,7 +4,7 @@ import styles from "../assets/css/ImpLinks.module.css";
 
 const ImpLinks = function(){
 
-    console.log(LinksData);
+    // console.log(LinksData);
 
     return (
         <div className={styles.LinksContainer}>

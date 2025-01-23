@@ -16,8 +16,7 @@ const TimeTableContent = function(){
         setTitle(DaysArray[index]);
     }, [Group,index])
 
-        
-    
+
 
 
     const getTimeTable = function(event){
