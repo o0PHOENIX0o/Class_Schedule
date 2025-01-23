@@ -67,11 +67,11 @@ const Schedule = {
     {
       "A": { 
         "course": "ICT 258/RRK/ETL410",
-        "Time": "11:00 PM - 1:00 PM"
+        "Time": "11:00 AM - 1:00 PM"
       },
       "B": { 
         "course": "ICT 254/RS/ETL506",
-        "Time": "11:00 PM - 1:00 PM"
+        "Time": "11:00 AM - 1:00 PM"
       }
     },
     {
@@ -116,11 +116,11 @@ const Schedule = {
     {
       "A": { 
         "course": "ICT 256/PC/ETL503",
-        "Time": "11:00 PM - 1:00 PM"
+        "Time": "11:00 AM - 1:00 PM"
       },
       "B": { 
         "course": "ICT 258/RRK/ETL410",
-        "Time": "11:00 PM - 1:00 PM"
+        "Time": "11:00 AM - 1:00 PM"
       }
     },
     {
