@@ -453,7 +453,7 @@ const SyllabusData = {
 };
 
 const GetSyllabusData = function(subject){
-  // console.log("syllabus: ",subject, SyllabusData[subject]);
+  console.log("syllabus: ",subject, SyllabusData[subject]);
     return SyllabusData[subject];
 }
 
