@@ -6,7 +6,7 @@ const SyllabusData = {
     "Subject": "Computer Graphics",
     "ShortName": "CG",
     "Credit": "3",
-    "Faculty": "",
+    "Faculty": "Prof. R. Rama Kishore",
     "SubjectCode": "ICT 202",
     "syllabus": [
       {
@@ -63,7 +63,7 @@ const SyllabusData = {
     "Subject": "Computational Methods",
     "ShortName": "CM",
     "Credit": "4",
-    "Faculty": "",
+    "Faculty": "Prof. Pravin Chandra",
     "SubjectCode": "ICT 204",
     "syllabus": [
       {
@@ -125,7 +125,7 @@ const SyllabusData = {
     "Subject": "Design and Analysis of Algorithms",
     "ShortName": "DAA",
     "Credit": "4",
-    "Faculty": "",
+    "Faculty": "Dr. Anuradha Chug",
     "SubjectCode": "ICT 206",
     "syllabus": [
       {
@@ -191,7 +191,7 @@ const SyllabusData = {
     "Subject": "Theory of Computation",
     "ShortName": "TOC",
     "Credit": "4",
-    "Faculty": "",
+    "Faculty": "Dr. Arshi Husain",
     "SubjectCode": "ICT 208",
     "syllabus": [
       {
@@ -261,7 +261,7 @@ const SyllabusData = {
     "Subject": "Software Engineering",
     "ShortName": "SE",
     "Credit": "3",
-    "Faculty": "",
+    "Faculty": "Dr. Ruchi Sehrawat",
     "SubjectCode": "ICT 210",
     "syllabus": [
       {
@@ -334,7 +334,7 @@ const SyllabusData = {
     "Subject": "Computer Networks",
     "ShortName": "CN",
     "Credit": "4",
-    "Faculty": "",
+    "Faculty": "Prof. M. Balakrishna",
     "SubjectCode": "ICT 212",
     "syllabus": [
       {
@@ -392,7 +392,7 @@ const SyllabusData = {
     "Subject": "Accountancy for Engineers",
     "ShortName": "AE",
     "Credit": "2",
-    "Faculty": "",
+    "Faculty": "Dr Ashima Negi",
     "SubjectCode": "MS 214",
     "syllabus": [
       {

@@ -1,10 +1,6 @@
 const Schedule = {
   "Monday": [
     { 
-      "course": "ICT 210/RS/ECR110" ,
-      "Time": "9:00 AM - 11:00 AM"
-    },
-    { 
       "course": "ICT 202/RRK/ECR110" ,
       "Time": "11:00 AM - 1:00 PM"
     },
@@ -15,11 +11,11 @@ const Schedule = {
     },
     {
       "A": { 
-        "course": "ICT 256/RA/ETL503",
+        "course": "ICT 254/AC/ETL506",
         "Time": "1:30 PM - 3:30 PM"
       },
       "B": { 
-        "course": "ICT 254/AC/ETL506",
+        "course": "ICT 256/RA/ETL503",
         "Time": "1:30 PM - 3:30 PM"
       }
     },
@@ -64,6 +60,10 @@ const Schedule = {
     }
   ],
   "Wednesday": [
+    { 
+      "course": "ICT 210/RS/ECR110" ,
+      "Time": "9:00 AM - 11:00 AM"
+    },
     {
       "A": { 
         "course": "ICT 258/RRK/ETL410",
@@ -80,7 +80,7 @@ const Schedule = {
       "Time": "1:00 PM - 1:30 PM"
     },
     { 
-      "course": "MS214/AN/ECR215" ,
+      "course": "MS 214/AN/ECR215" ,
       "Time": "1:30 PM - 3:30 PM"
     },
     {
@@ -155,6 +155,7 @@ const courses = {
   // Theory
   "ICT 202": {
     name: "Computer Graphics",
+
     shortName: "CG",
     credits: 3
   },
@@ -183,7 +184,7 @@ const courses = {
     shortName: "CN",
     credits: 4
   },
-  "MS214": {
+  "MS 214": {
     name: "Accountancy for Engineers",
     shortName: "AE",
     credits: 2
